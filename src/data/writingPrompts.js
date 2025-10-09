@@ -4,14 +4,24 @@ export const writingPrompts = {
     "Dragons that collect stories instead of gold",
     "A library where books write themselves",
     "Magic that only works when no one is watching",
-    "A kingdom where emotions control the weather"
+    "A kingdom where emotions control the weather",
+    "Every lie you tell becomes a physical object",
+    "A spell that lets you experience the last day of anyone who died",
+    "Trees that grow from buried secrets",
+    "A mirror that shows what you could have been",
+    "Flowers that bloom only when someone tells the truth"
   ],
   scifi: [
     "First contact happens through dreams",
     "Time travel, but you can only go backwards one day",
     "AI that experiences emotions through music",
     "A planet where thoughts are visible as colors",
-    "Teleportation exists, but you swap places with someone random"
+    "Teleportation exists, but you swap places with someone random",
+    "Humans discover they're NPCs in an alien video game",
+    "Memory can be extracted and sold as entertainment",
+    "A virus that makes people unable to lie",
+    "Gravity stops working for exactly 7 minutes every day",
+    "You receive emails from parallel universe versions of yourself"
   ],
   mystery: [
     "A detective who solves crimes by tasting objects",
