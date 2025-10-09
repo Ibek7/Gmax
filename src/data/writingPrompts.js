@@ -35,14 +35,24 @@ export const writingPrompts = {
     "The last conversation before a life-changing decision",
     "Someone discovers their life is being broadcast as a TV show",
     "A person who ages backwards emotionally",
-    "Characters who can only communicate through art"
+    "Characters who can only communicate through art",
+    "A family reunion where everyone pretends nothing has changed",
+    "Two strangers stuck in an elevator sharing their deepest secrets",
+    "A parent discovers their child's diary from 20 years ago",
+    "The day before retirement, everything you believed turns out to be false",
+    "A wedding where the bride and groom have never met"
   ],
   horror: [
     "Your reflection starts acting independently",
     "A house that rearranges itself when you sleep",
     "Shadows that whisper secrets about the future",
     "A phone that receives calls from your past selves",
-    "Mirrors that show who you could have become"
+    "Mirrors that show who you could have become",
+    "Every door in your house leads to a different time period",
+    "You wake up to find everyone else has vanished, except the mannequins",
+    "Your childhood imaginary friend returns as an adult",
+    "A music box that plays a different tune each night, predicting tomorrow's tragedy",
+    "Photographs in your album start changing when you're not looking"
   ]
 }
 
