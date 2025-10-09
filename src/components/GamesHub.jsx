@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ColorMemoryGame from '../games/ColorMemoryGame'
 import '../styles/GamesHub.css'
 
 const GamesHub = () => {
@@ -42,6 +43,10 @@ const GamesHub = () => {
   const startGame = (gameId) => {
     setSelectedGame(gameId)
     // This will be expanded with actual game implementations
+  }
+  
+  if (selectedGame === 'color-memory') {
+    return <ColorMemoryGame onBack={() => setSelectedGame(null)} />
   }
   
   if (selectedGame) {
