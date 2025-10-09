@@ -12,7 +12,8 @@ const Navigation = ({ currentTheme, setCurrentTheme }) => {
     { path: '/art', label: 'Art', icon: '🎨' },
     { path: '/music', label: 'Music', icon: '🎵' },
     { path: '/code', label: 'Code', icon: '💻' },
-    { path: '/achievements', label: 'Achievements', icon: '🏆' }
+    { path: '/achievements', label: 'Achievements', icon: '🏆' },
+    { path: '/productivity', label: 'Analytics', icon: '📊' }
   ]
   
   const themes = [

@@ -8,6 +8,7 @@ import ArtGallery from './components/ArtGallery'
 import MusicLab from './components/MusicLab'
 import CodeShowcase from './components/CodeShowcase'
 import AchievementShowcase from './components/AchievementShowcase'
+import ProductivityTracker from './components/ProductivityTracker'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/music" element={<MusicLab />} />
             <Route path="/code" element={<CodeShowcase />} />
             <Route path="/achievements" element={<AchievementShowcase />} />
+            <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
