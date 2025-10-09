@@ -14,6 +14,7 @@ const Navigation = ({ currentTheme, setCurrentTheme }) => {
     { path: '/code', label: 'Code', icon: '💻' },
     { path: '/achievements', label: 'Achievements', icon: '🏆' },
     { path: '/productivity', label: 'Analytics', icon: '📊' },
+    { path: '/share', label: 'Share', icon: '📱' },
     { path: '/settings', label: 'Settings', icon: '⚙️' },
     { path: '/data', label: 'Data', icon: '💾' }
   ]
