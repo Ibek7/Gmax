@@ -1,73 +1,85 @@
 import React, { useState } from 'react'
+import { getRandomPrompt, writingPrompts } from '../data/writingPrompts'
+import '../styles/CreativeWriting.css'
 
 const CreativeWriting = () => {
-  const [currentPrompt, setCurrentPrompt] = useState('')
+  const [currentPrompt, setCurrentPrompt] = useState(getRandomPrompt())
   const [userStory, setUserStory] = useState('')
+  const [selectedGenre, setSelectedGenre] = useState('all')
   
-  const prompts = [
-    "Write about a character who discovers they can hear colors",
-    "A world where emotions are traded like currency",
-    "The last library on Earth is about to close forever",
-    "You wake up with the ability to taste memories",
-    "A letter arrives 50 years late with urgent news"
-  ]
+  const genres = Object.keys(writingPrompts)
   
   const generatePrompt = () => {
-    const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)]
-    setCurrentPrompt(randomPrompt)
+    const newPrompt = selectedGenre === 'all' 
+      ? getRandomPrompt() 
+      : getRandomPrompt(selectedGenre)
+    setCurrentPrompt(newPrompt)
   }
   
+  const wordCount = userStory.split(' ').filter(word => word.length > 0).length
+  
   return (
-    <div className="creative-writing" style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-      <header style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>✍️ Creative Writing Studio</h1>
-        <p style={{ color: 'var(--text-secondary)' }}>Daily prompts to spark your imagination</p>
+    <div className="creative-writing">
+      <header className="writing-header">
+        <h1 className="writing-title">✍️ Creative Writing Studio</h1>
+        <p className="writing-subtitle">Transform prompts into stories, poems, and prose</p>
       </header>
       
-      <div style={{ background: 'var(--surface-color)', padding: '2rem', borderRadius: '1rem', marginBottom: '2rem', boxShadow: 'var(--shadow-md)' }}>
-        <h2 style={{ marginBottom: '1rem' }}>Today's Writing Prompt</h2>
-        {currentPrompt ? (
-          <blockquote style={{ fontSize: '1.2rem', fontStyle: 'italic', color: 'var(--primary-color)', marginBottom: '1rem' }}>
+      <div className="prompt-section">
+        <div className="prompt-controls">
+          <div className="genre-selector">
+            <label htmlFor="genre">Genre:</label>
+            <select 
+              id="genre"
+              value={selectedGenre}
+              onChange={(e) => setSelectedGenre(e.target.value)}
+              className="genre-select"
+            >
+              <option value="all">All Genres</option>
+              {genres.map(genre => (
+                <option key={genre} value={genre}>
+                  {genre.charAt(0).toUpperCase() + genre.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
+          <button onClick={generatePrompt} className="new-prompt-btn">
+            🎲 New Prompt
+          </button>
+        </div>
+        
+        <div className="current-prompt">
+          <h2>Writing Prompt</h2>
+          <blockquote className="prompt-text">
             "{currentPrompt}"
           </blockquote>
-        ) : (
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>Click the button below to get your writing prompt!</p>
-        )}
-        <button 
-          onClick={generatePrompt}
-          style={{ 
-            background: 'var(--primary-color)', 
-            color: 'white', 
-            border: 'none', 
-            padding: '0.5rem 1rem', 
-            borderRadius: '0.5rem', 
-            cursor: 'pointer' 
-          }}
-        >
-          Generate New Prompt
-        </button>
+        </div>
       </div>
       
-      <div style={{ background: 'var(--surface-color)', padding: '2rem', borderRadius: '1rem', boxShadow: 'var(--shadow-md)' }}>
-        <h2 style={{ marginBottom: '1rem' }}>Your Story</h2>
+      <div className="writing-area">
+        <div className="writing-controls">
+          <h2>Your Story</h2>
+          <div className="writing-stats">
+            <span className="word-count">Words: {wordCount}</span>
+            <span className="char-count">Characters: {userStory.length}</span>
+          </div>
+        </div>
+        
         <textarea
           value={userStory}
           onChange={(e) => setUserStory(e.target.value)}
-          placeholder="Start writing your story here..."
-          style={{
-            width: '100%',
-            height: '300px',
-            padding: '1rem',
-            border: '1px solid var(--border-color)',
-            borderRadius: '0.5rem',
-            fontSize: '1rem',
-            lineHeight: '1.6',
-            resize: 'vertical',
-            fontFamily: 'inherit'
-          }}
+          placeholder="Let your creativity flow... Start writing your response to the prompt above."
+          className="writing-textarea"
         />
-        <div style={{ marginTop: '1rem', color: 'var(--text-secondary)' }}>
-          Word count: {userStory.split(' ').filter(word => word.length > 0).length}
+      </div>
+      
+      <div className="writing-tools">
+        <h3>Writing Tools</h3>
+        <div className="tools-grid">
+          <button className="tool-btn">💾 Save Draft</button>
+          <button className="tool-btn">📝 Export</button>
+          <button className="tool-btn">🎯 Set Goal</button>
+          <button className="tool-btn">⏱️ Timer</button>
         </div>
       </div>
     </div>
