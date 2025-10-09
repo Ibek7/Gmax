@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ColorMemoryGame from '../games/ColorMemoryGame'
+import WordScrambleGame from '../games/WordScrambleGame'
 import '../styles/GamesHub.css'
 
 const GamesHub = () => {
@@ -15,12 +16,20 @@ const GamesHub = () => {
       status: 'available'
     },
     {
+      id: 'word-scramble',
+      title: 'Word Scramble',
+      description: 'Unscramble letters to form words',
+      icon: '🔤',
+      difficulty: 'Medium',
+      status: 'available'
+    },
+    {
       id: 'word-chain',
       title: 'Word Chain',
       description: 'Create word chains and build vocabulary',
       icon: '🔗',
       difficulty: 'Medium',
-      status: 'available'
+      status: 'coming-soon'
     },
     {
       id: 'pattern-puzzle',
@@ -47,6 +56,10 @@ const GamesHub = () => {
   
   if (selectedGame === 'color-memory') {
     return <ColorMemoryGame onBack={() => setSelectedGame(null)} />
+  }
+  
+  if (selectedGame === 'word-scramble') {
+    return <WordScrambleGame onBack={() => setSelectedGame(null)} />
   }
   
   if (selectedGame) {

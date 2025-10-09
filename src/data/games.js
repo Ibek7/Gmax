@@ -14,6 +14,21 @@ export const gameTemplates = {
     ]
   },
   
+  wordScramble: {
+    name: 'Word Scramble Challenge',
+    description: 'Unscramble letters to form words',
+    difficulty: 'Medium',
+    minScore: 0,
+    maxScore: 500,
+    timeLimit: 60,
+    instructions: [
+      'Look at the scrambled letters',
+      'Type the correct word',
+      'Earn points based on word length and level',
+      'Level up every 5 correct answers'
+    ]
+  },
+  
   wordChain: {
     name: 'Word Chain Challenge',
     description: 'Create chains of related words',
