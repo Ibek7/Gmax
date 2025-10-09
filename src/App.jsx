@@ -7,6 +7,7 @@ import CreativeWriting from './components/CreativeWriting'
 import ArtGallery from './components/ArtGallery'
 import MusicLab from './components/MusicLab'
 import CodeShowcase from './components/CodeShowcase'
+import NotFound from './components/NotFound'
 import './styles/App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/art" element={<ArtGallery />} />
             <Route path="/music" element={<MusicLab />} />
             <Route path="/code" element={<CodeShowcase />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </div>
