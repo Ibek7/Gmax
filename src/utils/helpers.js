@@ -77,7 +77,9 @@ export const getDailyGoalProgress = () => {
     dailyData[today] = {
       tasksCompleted: 0,
       creativityScore: 0,
-      timeSpent: 0
+      timeSpent: 0,
+      gamesPlayed: 0,
+      wordsWritten: 0
     }
   }
   
@@ -92,7 +94,9 @@ export const updateDailyProgress = (updates) => {
     dailyData[today] = {
       tasksCompleted: 0,
       creativityScore: 0,
-      timeSpent: 0
+      timeSpent: 0,
+      gamesPlayed: 0,
+      wordsWritten: 0
     }
   }
   
@@ -100,4 +104,33 @@ export const updateDailyProgress = (updates) => {
   saveToStorage('dailyProgress', dailyData)
   
   return dailyData[today]
+}
+
+// Game statistics utilities
+export const saveGameScore = (gameId, score) => {
+  const gameStats = loadFromStorage('gameStats', {})
+  
+  if (!gameStats[gameId]) {
+    gameStats[gameId] = {
+      highScore: 0,
+      totalPlays: 0,
+      totalScore: 0
+    }
+  }
+  
+  gameStats[gameId].totalPlays += 1
+  gameStats[gameId].totalScore += score
+  gameStats[gameId].highScore = Math.max(gameStats[gameId].highScore, score)
+  
+  saveToStorage('gameStats', gameStats)
+  
+  // Update daily progress
+  updateDailyProgress({ gamesPlayed: getDailyGoalProgress().gamesPlayed + 1 })
+  
+  return gameStats[gameId]
+}
+
+export const getGameStats = (gameId) => {
+  const gameStats = loadFromStorage('gameStats', {})
+  return gameStats[gameId] || { highScore: 0, totalPlays: 0, totalScore: 0 }
 }
