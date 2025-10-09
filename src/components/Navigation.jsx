@@ -17,7 +17,9 @@ const Navigation = ({ currentTheme, setCurrentTheme }) => {
   const themes = [
     { value: 'default', label: 'Light', icon: '☀️' },
     { value: 'dark', label: 'Dark', icon: '🌙' },
-    { value: 'neon', label: 'Neon', icon: '⚡' }
+    { value: 'neon', label: 'Neon', icon: '⚡' },
+    { value: 'sunset', label: 'Sunset', icon: '🌅' },
+    { value: 'ocean', label: 'Ocean', icon: '🌊' }
   ]
   
   return (
