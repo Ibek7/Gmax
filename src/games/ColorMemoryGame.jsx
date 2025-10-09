@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { saveGameScore, getGameStats } from '../utils/helpers'
+import { createConfetti } from '../utils/animations'
 import '../styles/ColorMemoryGame.css'
 
 const ColorMemoryGame = ({ onBack }) => {
@@ -9,6 +11,7 @@ const ColorMemoryGame = ({ onBack }) => {
   const [score, setScore] = useState(0)
   const [gameOver, setGameOver] = useState(false)
   const [activeColor, setActiveColor] = useState(null)
+  const [gameStats, setGameStats] = useState(getGameStats('color-memory'))
   
   const colors = [
     { id: 0, name: 'red', color: '#ff6b6b' },
@@ -53,19 +56,34 @@ const ColorMemoryGame = ({ onBack }) => {
     
     // Check if player clicked wrong color
     if (colorId !== sequence[newPlayerSequence.length - 1]) {
-      setGameOver(true)
-      setIsPlaying(false)
-      setIsPlayerTurn(false)
+      endGame()
       return
     }
     
     // Check if player completed the sequence
     if (newPlayerSequence.length === sequence.length) {
       setScore(score + 1)
+      
+      // Celebrate if it's a new high score
+      if (score + 1 > gameStats.highScore) {
+        setTimeout(() => {
+          const gameArea = document.querySelector('.color-memory-game')
+          if (gameArea) createConfetti(gameArea)
+        }, 500)
+      }
+      
       setTimeout(() => {
         nextRound(sequence)
       }, 1000)
     }
+  }
+  
+  const endGame = () => {
+    setGameOver(true)
+    setIsPlaying(false)
+    setIsPlayerTurn(false)
+    const newStats = saveGameScore('color-memory', score)
+    setGameStats(newStats)
   }
   
   return (
@@ -73,7 +91,10 @@ const ColorMemoryGame = ({ onBack }) => {
       <div className="game-header">
         <button onClick={onBack} className="back-btn">← Back</button>
         <h1>🌈 Color Memory</h1>
-        <div className="score">Score: {score}</div>
+        <div className="score-display">
+          <div className="current-score">Score: {score}</div>
+          <div className="high-score">Best: {gameStats.highScore}</div>
+        </div>
       </div>
       
       {!isPlaying && !gameOver && (
@@ -87,7 +108,11 @@ const ColorMemoryGame = ({ onBack }) => {
       {gameOver && (
         <div className="game-over">
           <h2>Game Over!</h2>
-          <p>Final Score: {score}</p>
+          <div className="final-stats">
+            <p>Final Score: <strong>{score}</strong></p>
+            <p>High Score: <strong>{gameStats.highScore}</strong></p>
+            <p>Games Played: <strong>{gameStats.totalPlays}</strong></p>
+          </div>
           <button onClick={startGame} className="play-again-btn">Play Again</button>
         </div>
       )}

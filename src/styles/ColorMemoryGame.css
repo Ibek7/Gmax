@@ -36,13 +36,41 @@
   margin: 0;
 }
 
-.score {
+.score-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.current-score {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   padding: var(--space-sm) var(--space-lg);
   border-radius: var(--space-lg);
   font-weight: 600;
   font-size: var(--font-size-lg);
+}
+
+.high-score {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  background-color: var(--surface-color);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--space-sm);
+}
+
+.final-stats {
+  margin-bottom: var(--space-xl);
+}
+
+.final-stats p {
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-lg);
+}
+
+.final-stats strong {
+  color: var(--primary-color);
 }
 
 .game-start,
