@@ -40,7 +40,26 @@
   border-left: 4px solid var(--primary-color);
   box-shadow: var(--shadow-md);
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto var(--space-md) auto;
+}
+
+.refresh-quote-btn {
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  color: white;
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--space-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.refresh-quote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .stats-grid {

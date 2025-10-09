@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { getRandomQuote } from '../data/quotes'
 import '../styles/Dashboard.css'
 
 const Dashboard = () => {
   const [currentTime, setCurrentTime] = useState(new Date())
   const [dailyGoal, setDailyGoal] = useState(5)
   const [completedTasks, setCompletedTasks] = useState(0)
+  const [todaysQuote, setTodaysQuote] = useState(getRandomQuote())
   
   useEffect(() => {
     const timer = setInterval(() => {
@@ -15,15 +17,9 @@ const Dashboard = () => {
     return () => clearInterval(timer)
   }, [])
   
-  const inspirationalQuotes = [
-    "Creativity is intelligence having fun. - Albert Einstein",
-    "The way to get started is to quit talking and begin doing. - Walt Disney",
-    "Innovation distinguishes between a leader and a follower. - Steve Jobs",
-    "Imagination is more important than knowledge. - Albert Einstein",
-    "The only way to do great work is to love what you do. - Steve Jobs"
-  ]
-  
-  const todaysQuote = inspirationalQuotes[Math.floor(Math.random() * inspirationalQuotes.length)]
+  const refreshQuote = () => {
+    setTodaysQuote(getRandomQuote())
+  }
   
   const quickStats = [
     { label: 'Daily Goal', value: `${completedTasks}/${dailyGoal}`, icon: '🎯' },
@@ -79,8 +75,11 @@ const Dashboard = () => {
       
       <div className="quote-section">
         <blockquote className="daily-quote">
-          "{todaysQuote}"
+          "{todaysQuote.text}" — {todaysQuote.author}
         </blockquote>
+        <button onClick={refreshQuote} className="refresh-quote-btn">
+          🎲 New Quote
+        </button>
       </div>
       
       <div className="stats-grid">
