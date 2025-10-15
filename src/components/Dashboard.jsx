@@ -5,6 +5,7 @@ import '../styles/Dashboard.css'
 import RecentProjectsSidebar from './RecentProjectsSidebar'
 import ThemeSwitcher from './ThemeSwitcher'
 import FeedbackModal from './FeedbackModal'
+import SessionTimer from './SessionTimer'
 
 const Dashboard = () => {
   const [currentTime, setCurrentTime] = useState(new Date())
@@ -109,6 +110,7 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
+        <SessionTimer />
         <div className="modules-section">
           <h2 className="section-title">Creative Modules</h2>
           <div className="modules-grid">

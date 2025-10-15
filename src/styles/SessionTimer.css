@@ -1,0 +1,44 @@
+.session-timer {
+  background: var(--surface-color);
+  border-radius: var(--space-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-xl);
+  text-align: center;
+  margin: var(--space-xl) auto;
+  max-width: 300px;
+}
+
+.session-timer h3 {
+  font-size: var(--font-size-lg);
+  color: var(--primary-color);
+  margin-bottom: var(--space-md);
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: var(--space-lg) 0;
+  font-family: 'Courier New', monospace;
+}
+
+.timer-controls {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.control-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background var(--transition-fast);
+}
+
+.control-btn:hover {
+  background: var(--accent-color);
+}
