@@ -27,6 +27,17 @@ const Dashboard = () => {
     { label: 'Active Projects', value: '6', icon: '📁' },
     { label: 'Creativity Score', value: '85%', icon: '⭐' }
   ]
+      // Daily Inspiration section
+      const DailyInspiration = () => (
+        <section className="quote-section">
+          <blockquote className="daily-quote">
+            "{todaysQuote.text}" — {todaysQuote.author}
+          </blockquote>
+          <button onClick={refreshQuote} className="refresh-quote-btn">
+            🎲 New Quote
+          </button>
+        </section>
+      )
   
   const featuredModules = [
     {
@@ -79,6 +90,7 @@ const Dashboard = () => {
         </blockquote>
         <button onClick={refreshQuote} className="refresh-quote-btn">
           🎲 New Quote
+          <DailyInspiration />
         </button>
       </div>
       
