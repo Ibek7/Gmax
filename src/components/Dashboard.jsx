@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { getRandomQuote } from '../data/quotes'
 import '../styles/Dashboard.css'
 import RecentProjectsSidebar from './RecentProjectsSidebar'
+import ThemeSwitcher from './ThemeSwitcher'
 
 const Dashboard = () => {
   const [currentTime, setCurrentTime] = useState(new Date())
@@ -27,6 +28,7 @@ const Dashboard = () => {
       <RecentProjectsSidebar />
       <div style={{ flex: 1 }}>
         <header className="dashboard-header">
+          <ThemeSwitcher />
           <h1 className="dashboard-title">Welcome to Gmax Creative Studio</h1>
           <p className="dashboard-subtitle">Your daily hub for creative inspiration and productivity</p>
         </header>
