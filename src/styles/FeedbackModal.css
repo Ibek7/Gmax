@@ -1,0 +1,50 @@
+.feedback-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.feedback-modal {
+  background: var(--surface-color);
+  border-radius: var(--space-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2xl);
+  min-width: 320px;
+  max-width: 400px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.feedback-success {
+  color: var(--success-color);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.submit-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: var(--space-md);
+}
+
+.submit-btn:hover {
+  background: var(--accent-color);
+}
