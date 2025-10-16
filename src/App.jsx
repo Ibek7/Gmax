@@ -15,6 +15,7 @@ import SocialShare from './components/SocialShare'
 import AchievementSystem from './components/AchievementSystem'
 import ProgressAnalytics from './components/ProgressAnalytics'
 import QuickActionsMenu from './components/QuickActionsMenu'
+import KeyboardShortcuts from './components/KeyboardShortcuts'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -26,6 +27,7 @@ function App() {
       <div className={`app theme-${currentTheme}`}>
         <Navigation currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
         <QuickActionsMenu />
+        <KeyboardShortcuts />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Dashboard />} />
