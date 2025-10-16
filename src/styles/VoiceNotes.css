@@ -1,0 +1,217 @@
+.voice-notes {
+  padding: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.voice-notes-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.voice-notes-header h1 {
+  font-size: var(--font-size-3xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.voice-notes-header p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}
+
+.recording-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.recorder-card {
+  background: var(--surface-color);
+  border-radius: var(--space-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  min-width: 400px;
+  border: 2px solid var(--border-color);
+}
+
+.recording-indicator {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  border-radius: var(--space-md);
+  background: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.recording-indicator.active {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.note-title-input {
+  width: 100%;
+  padding: var(--space-md);
+  border: 2px solid var(--border-color);
+  border-radius: var(--space-md);
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-lg);
+  font-family: inherit;
+}
+
+.record-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  border-radius: var(--space-lg);
+  padding: var(--space-lg) var(--space-2xl);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.record-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
+}
+
+.record-btn.recording {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+.recorder-hint {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.notes-section {
+  margin-top: var(--space-2xl);
+}
+
+.notes-section h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-2xl);
+  background: var(--surface-color);
+  border-radius: var(--space-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: var(--space-lg);
+  opacity: 0.5;
+}
+
+.empty-state p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.empty-subtitle {
+  font-size: var(--font-size-md) !important;
+  opacity: 0.7;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.note-card {
+  background: var(--surface-color);
+  border-radius: var(--space-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.note-card h3 {
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  flex: 1;
+  word-break: break-word;
+}
+
+.delete-note-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.delete-note-btn:hover {
+  opacity: 1;
+}
+
+.note-date {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.play-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  border: none;
+  border-radius: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.play-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.play-btn.playing {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+@media (max-width: 768px) {
+  .recorder-card {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
