@@ -14,6 +14,7 @@ import DataManager from './components/DataManager'
 import SocialShare from './components/SocialShare'
 import AchievementSystem from './components/AchievementSystem'
 import ProgressAnalytics from './components/ProgressAnalytics'
+import QuickActionsMenu from './components/QuickActionsMenu'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -24,6 +25,7 @@ function App() {
     <Router>
       <div className={`app theme-${currentTheme}`}>
         <Navigation currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
+        <QuickActionsMenu />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Dashboard />} />
