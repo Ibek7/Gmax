@@ -20,6 +20,7 @@ import ProgressExporter from './components/ProgressExporter'
 import CreativeChallenges from './components/CreativeChallenges'
 import VoiceNotes from './components/VoiceNotes'
 import MoodTracker from './components/MoodTracker'
+import NotificationsCenter from './components/NotificationsCenter'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -32,6 +33,7 @@ function App() {
         <Navigation currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
         <QuickActionsMenu />
         <KeyboardShortcuts />
+        <NotificationsCenter />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Dashboard />} />
