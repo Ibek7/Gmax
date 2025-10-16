@@ -13,6 +13,7 @@ import UserSettings from './components/UserSettings'
 import DataManager from './components/DataManager'
 import SocialShare from './components/SocialShare'
 import AchievementSystem from './components/AchievementSystem'
+import ProgressAnalytics from './components/ProgressAnalytics'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="/code" element={<CodeShowcase />} />
             <Route path="/achievements" element={<AchievementShowcase />} />
             <Route path="/achievement-system" element={<AchievementSystem />} />
+            <Route path="/analytics" element={<ProgressAnalytics />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
