@@ -1,0 +1,264 @@
+.restart-tutorial-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--surface-color);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  z-index: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restart-tutorial-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.tutorial-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tutorial-tooltip {
+  position: fixed;
+  background: var(--surface-color);
+  border-radius: var(--space-lg);
+  box-shadow: var(--shadow-xl);
+  z-index: 999;
+  max-width: 500px;
+  animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tooltip-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tooltip-bottom {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tooltip-bottom-right {
+  top: 100px;
+  right: 160px;
+}
+
+.tutorial-close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.tutorial-close:hover {
+  background: rgba(var(--primary-color-rgb), 0.1);
+  color: var(--text-primary);
+  transform: rotate(90deg);
+}
+
+.tutorial-content {
+  padding: var(--space-2xl);
+  padding-top: var(--space-xl);
+}
+
+.tutorial-step-indicator {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.tutorial-title {
+  font-size: var(--font-size-2xl);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-md) 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tutorial-description {
+  font-size: var(--font-size-md);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 var(--space-xl) 0;
+}
+
+.tutorial-dots {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  margin-top: var(--space-xl);
+}
+
+.tutorial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tutorial-dot:hover {
+  background: var(--text-secondary);
+  transform: scale(1.3);
+}
+
+.tutorial-dot.active {
+  background: var(--primary-color);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.tutorial-dot.completed {
+  background: var(--success-color);
+}
+
+.tutorial-actions {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-2xl) var(--space-2xl);
+  border-top: 1px solid var(--border-color);
+}
+
+.tutorial-btn {
+  flex: 1;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--space-md);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: none;
+}
+
+.tutorial-btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.tutorial-btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.tutorial-btn-secondary {
+  background: var(--surface-color);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.tutorial-btn-secondary:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.tutorial-btn-skip {
+  background: transparent;
+  color: var(--text-secondary);
+  flex: 0.5;
+}
+
+.tutorial-btn-skip:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .tutorial-tooltip {
+    max-width: 90%;
+    left: 5% !important;
+    right: 5% !important;
+    transform: none !important;
+  }
+  
+  .tooltip-center,
+  .tooltip-bottom,
+  .tooltip-bottom-right {
+    top: 50%;
+    transform: translateY(-50%) !important;
+  }
+  
+  .tutorial-content {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .tutorial-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .tutorial-description {
+    font-size: var(--font-size-sm);
+  }
+  
+  .tutorial-actions {
+    flex-wrap: wrap;
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+  }
+  
+  .tutorial-btn {
+    min-width: 100px;
+  }
+  
+  .restart-tutorial-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}

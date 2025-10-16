@@ -21,6 +21,7 @@ import CreativeChallenges from './components/CreativeChallenges'
 import VoiceNotes from './components/VoiceNotes'
 import MoodTracker from './components/MoodTracker'
 import NotificationsCenter from './components/NotificationsCenter'
+import OnboardingTutorial from './components/OnboardingTutorial'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -34,6 +35,7 @@ function App() {
         <QuickActionsMenu />
         <KeyboardShortcuts />
         <NotificationsCenter />
+        <OnboardingTutorial />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Dashboard />} />
