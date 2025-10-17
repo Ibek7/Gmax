@@ -26,6 +26,7 @@ import FocusTimer from './components/FocusTimer'
 import ProjectTemplates from './components/ProjectTemplates'
 import DailyGoals from './components/DailyGoals'
 import HabitTracker from './components/HabitTracker'
+import WeeklyReview from './components/WeeklyReview'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -59,6 +60,7 @@ function App() {
             <Route path="/templates" element={<ProjectTemplates />} />
             <Route path="/daily-goals" element={<DailyGoals />} />
             <Route path="/habit-tracker" element={<HabitTracker />} />
+            <Route path="/weekly-review" element={<WeeklyReview />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
