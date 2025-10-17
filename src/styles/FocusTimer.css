@@ -1,0 +1,312 @@
+.focus-timer-container {
+  min-height: 100vh;
+  padding: var(--space-2xl);
+  transition: background var(--transition-normal);
+}
+
+.mode-focus {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.mode-short-break {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.mode-long-break {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.focus-timer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.focus-timer-header h1 {
+  color: white;
+  font-size: var(--font-size-2xl);
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.back-btn, .settings-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--space-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
+}
+
+.back-btn:hover, .settings-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.settings-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--space-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.settings-panel h3 {
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--text-primary);
+}
+
+.setting-group {
+  margin-bottom: var(--space-md);
+}
+
+.setting-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-sm);
+}
+
+.setting-group input {
+  width: 100%;
+  padding: var(--space-md);
+  border: 2px solid var(--border-color);
+  border-radius: var(--space-sm);
+  font-size: var(--font-size-md);
+}
+
+.mode-selector {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.mode-btn {
+  flex: 1;
+  max-width: 200px;
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: var(--space-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
+}
+
+.mode-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.mode-btn.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.timer-display {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 12;
+}
+
+.progress-ring-fill {
+  fill: none;
+  stroke: white;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.timer-text {
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+.timer-text h2 {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.mode-label {
+  font-size: var(--font-size-lg);
+  margin: var(--space-sm) 0 0 0;
+  opacity: 0.9;
+}
+
+.timer-controls {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.control-btn {
+  padding: var(--space-lg) var(--space-2xl);
+  border: none;
+  border-radius: var(--space-md);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  min-width: 150px;
+}
+
+.control-btn.primary {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.control-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.control-btn.secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.control-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.focus-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--space-lg);
+  padding: var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-color);
+  border-radius: var(--space-md);
+}
+
+.stat-content h4 {
+  font-size: var(--font-size-xl);
+  margin: 0 0 var(--space-xs) 0;
+  color: var(--text-primary);
+}
+
+.stat-content p {
+  font-size: var(--font-size-sm);
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.focus-tips {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--space-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.focus-tips h3 {
+  margin: 0 0 var(--space-md) 0;
+  color: var(--text-primary);
+}
+
+.focus-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.focus-tips li {
+  padding: var(--space-sm) 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+}
+
+.focus-tips li::before {
+  content: '✓';
+  color: var(--success-color);
+  font-weight: 700;
+  margin-right: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .focus-timer-container {
+    padding: var(--space-lg);
+  }
+  
+  .focus-timer-header h1 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .mode-selector {
+    flex-direction: column;
+  }
+  
+  .mode-btn {
+    max-width: 100%;
+  }
+  
+  .progress-ring {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .timer-text h2 {
+    font-size: 3rem;
+  }
+  
+  .timer-controls {
+    flex-direction: column;
+  }
+  
+  .control-btn {
+    width: 100%;
+  }
+  
+  .focus-stats {
+    grid-template-columns: 1fr;
+  }
+}

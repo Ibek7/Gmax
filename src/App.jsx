@@ -22,6 +22,7 @@ import VoiceNotes from './components/VoiceNotes'
 import MoodTracker from './components/MoodTracker'
 import NotificationsCenter from './components/NotificationsCenter'
 import OnboardingTutorial from './components/OnboardingTutorial'
+import FocusTimer from './components/FocusTimer'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -51,6 +52,7 @@ function App() {
             <Route path="/challenges" element={<CreativeChallenges />} />
             <Route path="/voice-notes" element={<VoiceNotes />} />
             <Route path="/mood-tracker" element={<MoodTracker />} />
+            <Route path="/focus-timer" element={<FocusTimer />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
