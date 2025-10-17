@@ -28,6 +28,9 @@ import DailyGoals from './components/DailyGoals'
 import HabitTracker from './components/HabitTracker'
 import WeeklyReview from './components/WeeklyReview'
 import SkillTree from './components/SkillTree'
+import InspirationGallery from './components/InspirationGallery'
+import ResourceLibrary from './components/ResourceLibrary'
+import TimeCapsule from './components/TimeCapsule'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -63,6 +66,9 @@ function App() {
             <Route path="/habit-tracker" element={<HabitTracker />} />
             <Route path="/weekly-review" element={<WeeklyReview />} />
             <Route path="/skill-tree" element={<SkillTree />} />
+            <Route path="/inspiration" element={<InspirationGallery />} />
+            <Route path="/resources" element={<ResourceLibrary />} />
+            <Route path="/time-capsule" element={<TimeCapsule />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
