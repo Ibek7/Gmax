@@ -44,6 +44,7 @@ import LearningPaths from './components/LearningPaths'
 import CollaborationHub from './components/CollaborationHub'
 import WritingSprintTimer from './components/WritingSprintTimer'
 import CreativeJournal from './components/CreativeJournal'
+import PortfolioShowcase from './components/PortfolioShowcase'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -95,6 +96,7 @@ function App() {
             <Route path="/collaboration" element={<CollaborationHub />} />
             <Route path="/writing-sprint" element={<WritingSprintTimer />} />
             <Route path="/creative-journal" element={<CreativeJournal />} />
+            <Route path="/portfolio" element={<PortfolioShowcase />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
