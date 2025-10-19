@@ -41,6 +41,7 @@ import RewardsSystem from './components/RewardsSystem'
 import ZenMode from './components/ZenMode'
 import ActivityFeed from './components/ActivityFeed'
 import LearningPaths from './components/LearningPaths'
+import CollaborationHub from './components/CollaborationHub'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -89,6 +90,7 @@ function App() {
             <Route path="/zen-mode" element={<ZenMode />} />
             <Route path="/activity-feed" element={<ActivityFeed />} />
             <Route path="/learning-paths" element={<LearningPaths />} />
+            <Route path="/collaboration" element={<CollaborationHub />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
