@@ -1,0 +1,157 @@
+.idea-incubator-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 2rem;
+}
+
+.incubator-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.incubator-header h1 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.add-idea-section {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.add-idea-section input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.add-idea-section button {
+  padding: 1rem 2rem;
+  background: white;
+  color: #f5576c;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.stages-nav {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.stage-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.stage-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.stage-btn.active {
+  background: white;
+  color: #f5576c;
+}
+
+.stage-btn .count {
+  background: #f5576c;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.stage-btn.active .count {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.ideas-board {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.no-ideas {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  padding: 3rem;
+}
+
+.idea-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.idea-card:hover {
+  transform: translateY(-5px);
+}
+
+.idea-card p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.idea-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.idea-actions select {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  text-transform: capitalize;
+}
+
+.idea-actions button {
+  background: #f8f9fa;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .ideas-board {
+    grid-template-columns: 1fr;
+  }
+  
+  .stages-nav {
+    flex-wrap: wrap;
+  }
+}
