@@ -1,0 +1,215 @@
+.rewards-system-container {
+  min-height: 100vh;
+  padding: var(--space-2xl);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.rewards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.rewards-header h1 {
+  color: white;
+  font-size: var(--font-size-2xl);
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--space-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.progress-overview {
+  background: white;
+  border-radius: var(--space-lg);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.level-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.level-badge {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.level-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.level-label {
+  font-size: var(--font-size-sm);
+  color: white;
+  font-weight: 600;
+}
+
+.level-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.points-total {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.next-level {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.quick-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.quick-actions button {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--space-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.quick-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--space-xl);
+}
+
+.reward-card {
+  background: white;
+  border-radius: var(--space-lg);
+  padding: var(--space-xl);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 3px solid;
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+
+.reward-card.unlocked {
+  opacity: 1;
+  animation: unlock 0.5s ease;
+}
+
+.reward-card.available {
+  opacity: 0.9;
+  animation: pulse 2s infinite;
+}
+
+@keyframes unlock {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.reward-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.reward-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+.reward-name {
+  color: var(--text-primary);
+  margin: 0 0 var(--space-sm) 0;
+  font-size: var(--font-size-lg);
+}
+
+.reward-description {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--space-lg) 0;
+  line-height: 1.5;
+}
+
+.reward-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.reward-tier {
+  padding: 4px var(--space-sm);
+  border-radius: var(--space-sm);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.reward-points {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .rewards-system-container {
+    padding: var(--space-lg);
+  }
+  
+  .progress-overview {
+    flex-direction: column;
+  }
+  
+  .rewards-grid {
+    grid-template-columns: 1fr;
+  }
+}

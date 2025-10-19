@@ -37,6 +37,7 @@ import QuickNotes from './components/QuickNotes'
 import MetricsDashboard from './components/MetricsDashboard'
 import DailyPrompts from './components/DailyPrompts'
 import ProjectTimeline from './components/ProjectTimeline'
+import RewardsSystem from './components/RewardsSystem'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -81,6 +82,7 @@ function App() {
             <Route path="/metrics" element={<MetricsDashboard />} />
             <Route path="/daily-prompts" element={<DailyPrompts />} />
             <Route path="/project-timeline" element={<ProjectTimeline />} />
+            <Route path="/rewards" element={<RewardsSystem />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
