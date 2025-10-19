@@ -43,6 +43,7 @@ import ActivityFeed from './components/ActivityFeed'
 import LearningPaths from './components/LearningPaths'
 import CollaborationHub from './components/CollaborationHub'
 import WritingSprintTimer from './components/WritingSprintTimer'
+import CreativeJournal from './components/CreativeJournal'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -93,6 +94,7 @@ function App() {
             <Route path="/learning-paths" element={<LearningPaths />} />
             <Route path="/collaboration" element={<CollaborationHub />} />
             <Route path="/writing-sprint" element={<WritingSprintTimer />} />
+            <Route path="/creative-journal" element={<CreativeJournal />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
