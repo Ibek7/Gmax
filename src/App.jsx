@@ -35,6 +35,7 @@ import CreativeCalendar from './components/CreativeCalendar'
 import BookmarksManager from './components/BookmarksManager'
 import QuickNotes from './components/QuickNotes'
 import MetricsDashboard from './components/MetricsDashboard'
+import DailyPrompts from './components/DailyPrompts'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -77,6 +78,7 @@ function App() {
             <Route path="/bookmarks" element={<BookmarksManager />} />
             <Route path="/quick-notes" element={<QuickNotes />} />
             <Route path="/metrics" element={<MetricsDashboard />} />
+            <Route path="/daily-prompts" element={<DailyPrompts />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
