@@ -1,0 +1,156 @@
+.art-reference-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  padding: 2rem;
+}
+
+.reference-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.reference-header h1 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.add-reference-section {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.add-reference-section input,
+.add-reference-section select {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.add-reference-section input {
+  flex: 1;
+}
+
+.add-reference-section button {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #fa709a;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.category-filter {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.category-filter button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.category-filter button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.category-filter button.active {
+  background: white;
+  color: #fa709a;
+}
+
+.references-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.reference-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.reference-card:hover {
+  transform: translateY(-5px);
+}
+
+.reference-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  font-size: 4rem;
+}
+
+.reference-info {
+  padding: 1rem;
+}
+
+.reference-info h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #fa709a;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .add-reference-section {
+    flex-wrap: wrap;
+  }
+  
+  .references-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
