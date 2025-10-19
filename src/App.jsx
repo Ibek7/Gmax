@@ -31,6 +31,7 @@ import SkillTree from './components/SkillTree'
 import InspirationGallery from './components/InspirationGallery'
 import ResourceLibrary from './components/ResourceLibrary'
 import TimeCapsule from './components/TimeCapsule'
+import CreativeCalendar from './components/CreativeCalendar'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -69,6 +70,7 @@ function App() {
             <Route path="/inspiration" element={<InspirationGallery />} />
             <Route path="/resources" element={<ResourceLibrary />} />
             <Route path="/time-capsule" element={<TimeCapsule />} />
+            <Route path="/calendar" element={<CreativeCalendar />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
