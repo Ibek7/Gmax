@@ -33,6 +33,7 @@ import ResourceLibrary from './components/ResourceLibrary'
 import TimeCapsule from './components/TimeCapsule'
 import CreativeCalendar from './components/CreativeCalendar'
 import BookmarksManager from './components/BookmarksManager'
+import QuickNotes from './components/QuickNotes'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -73,6 +74,7 @@ function App() {
             <Route path="/time-capsule" element={<TimeCapsule />} />
             <Route path="/calendar" element={<CreativeCalendar />} />
             <Route path="/bookmarks" element={<BookmarksManager />} />
+            <Route path="/quick-notes" element={<QuickNotes />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
