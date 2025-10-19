@@ -1,0 +1,253 @@
+.zen-mode-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.5s;
+}
+
+.zen-mode-container.active {
+  background: linear-gradient(135deg, #2d3436 0%, #000000 100%);
+}
+
+.zen-setup {
+  min-height: 100vh;
+  padding: var(--space-2xl);
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--space-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.zen-content {
+  max-width: 800px;
+  margin: var(--space-3xl) auto;
+  text-align: center;
+}
+
+.zen-content h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0 0 var(--space-md) 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.zen-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size-lg);
+  margin: 0 0 var(--space-3xl) 0;
+}
+
+.zen-settings {
+  background: white;
+  border-radius: var(--space-lg);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.setting-group {
+  margin-bottom: var(--space-2xl);
+}
+
+.setting-group:last-child {
+  margin-bottom: 0;
+}
+
+.setting-group h3 {
+  color: var(--text-primary);
+  margin: 0 0 var(--space-lg) 0;
+}
+
+.sounds-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.sound-btn {
+  padding: var(--space-lg);
+  border: 2px solid var(--border-color);
+  border-radius: var(--space-md);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.sound-btn:hover,
+.sound-btn.active {
+  border-color: var(--primary-color);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.sound-icon {
+  font-size: 2rem;
+}
+
+.sound-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.timer-controls button {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  background: white;
+  color: var(--primary-color);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.timer-controls button:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.timer-display {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.enter-zen-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: var(--space-lg) var(--space-3xl);
+  border-radius: var(--space-lg);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.enter-zen-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.zen-active {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl);
+  position: relative;
+}
+
+.zen-minimal-controls {
+  position: absolute;
+  top: var(--space-xl);
+  right: var(--space-xl);
+}
+
+.exit-zen-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--space-sm);
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.exit-zen-btn:hover {
+  opacity: 1;
+}
+
+.zen-center {
+  text-align: center;
+  z-index: 2;
+}
+
+.zen-timer-display {
+  font-size: 6rem;
+  font-weight: 200;
+  color: white;
+  margin-bottom: var(--space-xl);
+}
+
+.zen-quote {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size-xl);
+  font-style: italic;
+  margin: 0 0 var(--space-xl) 0;
+  max-width: 600px;
+}
+
+.zen-sound-indicator {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--font-size-md);
+}
+
+.zen-breathing-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.breathing-animation {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .zen-setup {
+    padding: var(--space-lg);
+  }
+  
+  .sounds-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .zen-timer-display {
+    font-size: 4rem;
+  }
+}

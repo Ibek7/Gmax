@@ -38,6 +38,9 @@ import MetricsDashboard from './components/MetricsDashboard'
 import DailyPrompts from './components/DailyPrompts'
 import ProjectTimeline from './components/ProjectTimeline'
 import RewardsSystem from './components/RewardsSystem'
+import ZenMode from './components/ZenMode'
+import ActivityFeed from './components/ActivityFeed'
+import LearningPaths from './components/LearningPaths'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -83,6 +86,9 @@ function App() {
             <Route path="/daily-prompts" element={<DailyPrompts />} />
             <Route path="/project-timeline" element={<ProjectTimeline />} />
             <Route path="/rewards" element={<RewardsSystem />} />
+            <Route path="/zen-mode" element={<ZenMode />} />
+            <Route path="/activity-feed" element={<ActivityFeed />} />
+            <Route path="/learning-paths" element={<LearningPaths />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
