@@ -1,0 +1,377 @@
+.focus-session-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--mode-color, #e74c3c) 0%, #c0392b 100%);
+  padding: 40px 20px;
+  transition: background 0.5s ease;
+}
+
+.focus-header {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.focus-header h1 {
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  text-align: center;
+}
+
+.back-btn, .settings-btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover, .settings-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Timer Main */
+.timer-main {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  background: white;
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.mode-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  background: #f5f5f5;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.mode-selector button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.mode-selector button.active {
+  background: var(--mode-color, #e74c3c);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Timer Display */
+.timer-display {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  font-size: 4em;
+  font-weight: bold;
+  color: var(--mode-color, #e74c3c);
+  position: absolute;
+  z-index: 2;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-ring circle {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+/* Timer Controls */
+.timer-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.control-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn.primary {
+  background: var(--mode-color, #e74c3c);
+  color: white;
+}
+
+/* Session Counter */
+.session-counter {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  font-weight: 600;
+}
+
+.session-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: all 0.3s ease;
+}
+
+.dot.completed {
+  background: var(--mode-color, #e74c3c);
+  box-shadow: 0 0 10px var(--mode-color, #e74c3c);
+}
+
+/* Stats Section */
+.stats-section {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stat-value {
+  font-size: 3em;
+  font-weight: bold;
+  color: var(--mode-color, #e74c3c);
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1em;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Settings Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.settings-modal {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.settings-modal h2 {
+  margin: 0 0 30px;
+  color: #333;
+  font-size: 2em;
+}
+
+.setting-group {
+  margin-bottom: 25px;
+}
+
+.setting-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #666;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.setting-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.setting-group input:focus {
+  outline: none;
+  border-color: var(--mode-color, #e74c3c);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.save-btn, .cancel-btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  background: var(--mode-color, #e74c3c);
+  color: white;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-btn {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .focus-session-container {
+    padding: 20px 15px;
+  }
+
+  .focus-header h1 {
+    font-size: 1.8em;
+  }
+
+  .timer-main {
+    padding: 30px 20px;
+  }
+
+  .timer-display {
+    width: 250px;
+    height: 250px;
+  }
+
+  .timer-display svg {
+    width: 250px;
+    height: 250px;
+  }
+
+  .time {
+    font-size: 3em;
+  }
+
+  .control-btn {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+
+  .settings-modal {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .focus-header {
+    flex-wrap: wrap;
+  }
+
+  .focus-header h1 {
+    font-size: 1.5em;
+    width: 100%;
+    order: -1;
+    text-align: left;
+  }
+
+  .mode-selector {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .timer-display {
+    width: 200px;
+    height: 200px;
+  }
+
+  .timer-display svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .time {
+    font-size: 2.5em;
+  }
+
+  .timer-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .control-btn {
+    width: 100%;
+  }
+
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+}
