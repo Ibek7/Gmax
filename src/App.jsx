@@ -54,6 +54,7 @@ import ChallengeLeaderboard from './components/ChallengeLeaderboard'
 import CreativeVisionBoard from './components/CreativeVisionBoard'
 import DailyAffirmations from './components/DailyAffirmations'
 import CreativeToolbox from './components/CreativeToolbox'
+import ProjectGraveyard from './components/ProjectGraveyard'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -115,6 +116,7 @@ function App() {
             <Route path="/vision-board" element={<CreativeVisionBoard />} />
             <Route path="/affirmations" element={<DailyAffirmations />} />
             <Route path="/toolbox" element={<CreativeToolbox />} />
+            <Route path="/project-graveyard" element={<ProjectGraveyard />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
