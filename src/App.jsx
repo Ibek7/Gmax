@@ -65,6 +65,7 @@ import WinsJournal from './components/WinsJournal'
 import InspirationFeed from './components/InspirationFeed'
 import AchievementBadges from './components/AchievementBadges'
 import ProjectTemplates from './components/ProjectTemplates'
+import WorkspaceThemes from './components/WorkspaceThemes'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
