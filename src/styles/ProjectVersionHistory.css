@@ -1,0 +1,116 @@
+.versions-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  padding: 40px 20px;
+}
+
+.versions-header {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.versions-header h1 {
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.project-selector {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-selector button {
+  padding: 12px 24px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.project-selector button.active {
+  background: white;
+  color: #fa709a;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 50px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: white;
+}
+
+.version-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.version-marker {
+  position: absolute;
+  left: -38px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: #fa709a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.version-content {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.version-content h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.date {
+  color: #999;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.restore-btn {
+  padding: 10px 20px;
+  background: #fa709a;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}

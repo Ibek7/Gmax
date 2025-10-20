@@ -66,6 +66,10 @@ import InspirationFeed from './components/InspirationFeed'
 import AchievementBadges from './components/AchievementBadges'
 import ProjectTemplates from './components/ProjectTemplates'
 import WorkspaceThemes from './components/WorkspaceThemes'
+import CollaborationInvites from './components/CollaborationInvites'
+import MentorMatching from './components/MentorMatching'
+import ProjectVersionHistory from './components/ProjectVersionHistory'
+import BreakSuggestions from './components/BreakSuggestions'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -139,6 +143,10 @@ function App() {
           <Route path="/achievement-badges" element={<AchievementBadges />} />
           <Route path="/project-templates" element={<ProjectTemplates />} />
           <Route path="/workspace-themes" element={<WorkspaceThemes />} />
+          <Route path="/collaboration-invites" element={<CollaborationInvites />} />
+          <Route path="/mentor-matching" element={<MentorMatching />} />
+          <Route path="/version-history" element={<ProjectVersionHistory />} />
+          <Route path="/break-suggestions" element={<BreakSuggestions />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />

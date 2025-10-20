@@ -1,0 +1,117 @@
+.mentor-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  padding: 40px 20px;
+}
+
+.mentor-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mentor-header h1 {
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-bar {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-bar button {
+  padding: 10px 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-bar button.active {
+  background: white;
+  color: #4facfe;
+}
+
+.profiles-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #4facfe;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.profile-card.mentor .role-badge {
+  background: #d4edda;
+  color: #155724;
+}
+
+.profile-card.mentee .role-badge {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.bio {
+  color: #666;
+  font-style: italic;
+}
+
+.connect-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+}
