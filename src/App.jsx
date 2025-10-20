@@ -61,6 +61,7 @@ import ProjectRoadmap from './components/ProjectRoadmap'
 import SkillsMatrix from './components/SkillsMatrix'
 import BudgetTracker from './components/BudgetTracker'
 import EnergyTracker from './components/EnergyTracker'
+import WinsJournal from './components/WinsJournal'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -129,6 +130,7 @@ function App() {
             <Route path="/skills-matrix" element={<SkillsMatrix />} />
             <Route path="/budget-tracker" element={<BudgetTracker />} />
             <Route path="/energy-tracker" element={<EnergyTracker />} />
+            <Route path="/wins-journal" element={<WinsJournal />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
