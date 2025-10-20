@@ -58,6 +58,7 @@ import ProjectGraveyard from './components/ProjectGraveyard'
 import CreativeStatsDashboard from './components/CreativeStatsDashboard'
 import FocusSessionTimer from './components/FocusSessionTimer'
 import ProjectRoadmap from './components/ProjectRoadmap'
+import SkillsMatrix from './components/SkillsMatrix'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -123,6 +124,7 @@ function App() {
             <Route path="/stats" element={<CreativeStatsDashboard />} />
             <Route path="/focus-timer" element={<FocusSessionTimer />} />
             <Route path="/roadmap" element={<ProjectRoadmap />} />
+            <Route path="/skills-matrix" element={<SkillsMatrix />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
