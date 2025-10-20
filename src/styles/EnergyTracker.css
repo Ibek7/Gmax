@@ -1,0 +1,241 @@
+.energy-tracker-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  padding: 40px 20px;
+}
+
+.energy-header {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.energy-header h1 {
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+
+.back-btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stats-overview {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+.date-selector {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.date-selector input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.energy-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.energy-grid h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.grid-hint {
+  color: #666;
+  margin: 0 0 30px;
+}
+
+.hourly-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hour-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hour-label {
+  width: 80px;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.level-buttons {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.level-btn {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1em;
+}
+
+.level-btn:hover {
+  transform: scale(1.05);
+}
+
+.level-btn.active {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.energy-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+}
+
+.legend-item span {
+  color: #666;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.insights-section {
+  max-width: 1000px;
+  margin: 30px auto 0;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.insights-section h2 {
+  margin: 0 0 25px;
+  color: #333;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.insight-card {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.insight-icon {
+  font-size: 2.5em;
+}
+
+.insight-text {
+  color: white;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .energy-tracker-container {
+    padding: 20px 15px;
+  }
+
+  .energy-header h1 {
+    font-size: 1.8em;
+  }
+
+  .energy-grid {
+    padding: 25px 20px;
+  }
+
+  .hour-label {
+    width: 60px;
+    font-size: 0.9em;
+  }
+
+  .level-btn {
+    height: 35px;
+    font-size: 0.9em;
+  }
+
+  .energy-legend {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
