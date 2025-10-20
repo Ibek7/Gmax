@@ -52,6 +52,7 @@ import CodeSnippetsLibrary from './components/CodeSnippetsLibrary'
 import ArtReferenceBoard from './components/ArtReferenceBoard'
 import ChallengeLeaderboard from './components/ChallengeLeaderboard'
 import CreativeVisionBoard from './components/CreativeVisionBoard'
+import DailyAffirmations from './components/DailyAffirmations'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -111,6 +112,7 @@ function App() {
             <Route path="/art-references" element={<ArtReferenceBoard />} />
             <Route path="/leaderboard" element={<ChallengeLeaderboard />} />
             <Route path="/vision-board" element={<CreativeVisionBoard />} />
+            <Route path="/affirmations" element={<DailyAffirmations />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />

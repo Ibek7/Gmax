@@ -1,0 +1,346 @@
+.daily-affirmations-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 2rem;
+}
+
+.affirmations-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.affirmations-header h1 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.affirmations-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.main-affirmation-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.affirmation-card {
+  background: white;
+  border-radius: 30px;
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.affirmation-card:hover {
+  transform: translateY(-5px);
+}
+
+.affirmation-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.affirmation-text {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.affirmation-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.favorite-btn,
+.new-affirmation-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn {
+  background: #f8f9fa;
+  color: #666;
+}
+
+.favorite-btn.active {
+  background: linear-gradient(135deg, #ff6b9d, #feca57);
+  color: white;
+}
+
+.new-affirmation-btn {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+  box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+}
+
+.favorite-btn:hover,
+.new-affirmation-btn:hover {
+  transform: translateY(-2px);
+}
+
+.add-custom-btn {
+  padding: 1rem 2rem;
+  background: white;
+  color: #f5576c;
+  border: 3px dashed #f5576c;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-custom-btn:hover {
+  background: #f5576c;
+  color: white;
+  border-style: solid;
+}
+
+.custom-affirmations-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.custom-affirmations-section h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.custom-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.custom-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.custom-item:hover {
+  background: #e9ecef;
+}
+
+.custom-item button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.custom-item button:hover {
+  opacity: 1;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.favorites-section,
+.history-section {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.favorites-section h3,
+.history-section h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.favorites-list,
+.history-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.favorite-item {
+  padding: 1rem;
+  background: linear-gradient(135deg, #ff6b9d15, #feca5715);
+  border-left: 4px solid #ff6b9d;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  line-height: 1.5;
+}
+
+.favorite-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.history-item {
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.history-text {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.history-date {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: white;
+  border-radius: 25px;
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.modal-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #f5576c;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background: #e9ecef;
+  color: #555;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.cancel-btn:hover,
+.save-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .affirmations-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .affirmation-text {
+    font-size: 1.5rem;
+  }
+  
+  .affirmation-card {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .affirmation-text {
+    font-size: 1.3rem;
+  }
+  
+  .affirmation-actions {
+    flex-direction: column;
+  }
+  
+  .favorite-btn,
+  .new-affirmation-btn {
+    width: 100%;
+  }
+}
