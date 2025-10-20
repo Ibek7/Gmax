@@ -137,6 +137,7 @@ function App() {
           <Route path="/inspiration-feed" element={<InspirationFeed />} />
           <Route path="/achievement-badges" element={<AchievementBadges />} />
           <Route path="/project-templates" element={<ProjectTemplates />} />
+          <Route path="/workspace-themes" element={<WorkspaceThemes />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
