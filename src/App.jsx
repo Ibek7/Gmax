@@ -70,6 +70,10 @@ import CollaborationInvites from './components/CollaborationInvites'
 import MentorMatching from './components/MentorMatching'
 import ProjectVersionHistory from './components/ProjectVersionHistory'
 import BreakSuggestions from './components/BreakSuggestions'
+import CreativeQuiz from './components/CreativeQuiz'
+import PomodoroAdvanced from './components/PomodoroAdvanced'
+import CreativeGoalsTracker from './components/CreativeGoalsTracker'
+import TeamCollabBoard from './components/TeamCollabBoard'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -147,6 +151,10 @@ function App() {
           <Route path="/mentor-matching" element={<MentorMatching />} />
           <Route path="/version-history" element={<ProjectVersionHistory />} />
           <Route path="/break-suggestions" element={<BreakSuggestions />} />
+          <Route path="/creative-quiz" element={<CreativeQuiz />} />
+          <Route path="/pomodoro-advanced" element={<PomodoroAdvanced />} />
+          <Route path="/goals-tracker" element={<CreativeGoalsTracker />} />
+          <Route path="/team-collab" element={<TeamCollabBoard />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
