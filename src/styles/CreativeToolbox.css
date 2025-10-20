@@ -1,0 +1,253 @@
+.creative-toolbox-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+
+.toolbox-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.toolbox-header h1 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.toolbox-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+}
+
+.tools-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tool-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(5px);
+}
+
+.tool-btn.active {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+}
+
+.tool-name {
+  font-size: 1rem;
+}
+
+.tool-content {
+  background: white;
+  border-radius: 25px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.tool-section h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.tool-section p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.generate-btn,
+.name-buttons button,
+.lorem-buttons button,
+.dice-buttons button,
+.timer-presets button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.generate-btn:hover,
+.name-buttons button:hover,
+.lorem-buttons button:hover,
+.dice-buttons button:hover,
+.timer-presets button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.color-palette-display {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.color-swatch {
+  text-align: center;
+}
+
+.color-box {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.color-code {
+  font-family: monospace;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.color-swatch button {
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.color-swatch button:hover {
+  background: #e9ecef;
+}
+
+.name-buttons,
+.lorem-buttons,
+.dice-buttons,
+.timer-presets {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.name-result,
+.dice-result {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.name-result h3 {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin: 0 0 1rem;
+}
+
+.name-result button,
+.lorem-result button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lorem-result {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.lorem-result pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.dice-display {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #667eea;
+  margin: 1rem 0;
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.dice-result p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .toolbox-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .tools-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .tool-btn {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .color-palette-display {
+    grid-template-columns: 1fr;
+  }
+  
+  .name-buttons,
+  .lorem-buttons,
+  .dice-buttons,
+  .timer-presets {
+    flex-direction: column;
+  }
+  
+  .name-buttons button,
+  .lorem-buttons button,
+  .dice-buttons button,
+  .timer-presets button {
+    width: 100%;
+  }
+}
