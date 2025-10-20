@@ -62,6 +62,7 @@ import SkillsMatrix from './components/SkillsMatrix'
 import BudgetTracker from './components/BudgetTracker'
 import EnergyTracker from './components/EnergyTracker'
 import WinsJournal from './components/WinsJournal'
+import InspirationFeed from './components/InspirationFeed'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -131,6 +132,7 @@ function App() {
             <Route path="/budget-tracker" element={<BudgetTracker />} />
             <Route path="/energy-tracker" element={<EnergyTracker />} />
             <Route path="/wins-journal" element={<WinsJournal />} />
+          <Route path="/inspiration-feed" element={<InspirationFeed />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
