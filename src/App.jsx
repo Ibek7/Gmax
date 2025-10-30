@@ -91,6 +91,7 @@ import ExpenseTracker from './components/ExpenseTracker'
 import RecipeManager from './components/RecipeManager'
 import FitnessPlanner from './components/FitnessPlanner'
 import StudyTimer from './components/StudyTimer'
+import ReadingTracker from './components/ReadingTracker'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -189,6 +190,7 @@ function App() {
           <Route path="/recipe-manager" element={<RecipeManager />} />
           <Route path="/fitness-planner" element={<FitnessPlanner />} />
           <Route path="/study-timer" element={<StudyTimer />} />
+          <Route path="/reading-tracker" element={<ReadingTracker />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
