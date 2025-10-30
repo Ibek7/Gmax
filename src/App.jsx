@@ -85,6 +85,7 @@ import TeamChat from './components/TeamChat'
 import ProgressDashboard from './components/ProgressDashboard'
 import SmartBookmarks from './components/SmartBookmarks'
 import MeetingScheduler from './components/MeetingScheduler'
+import FileManager from './components/FileManager'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -177,6 +178,7 @@ function App() {
           <Route path="/progress-dashboard" element={<ProgressDashboard />} />
           <Route path="/smart-bookmarks" element={<SmartBookmarks />} />
           <Route path="/meeting-scheduler" element={<MeetingScheduler />} />
+          <Route path="/file-manager" element={<FileManager />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
