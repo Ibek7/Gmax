@@ -89,6 +89,7 @@ import FileManager from './components/FileManager'
 import AnalyticsHub from './components/AnalyticsHub'
 import ExpenseTracker from './components/ExpenseTracker'
 import RecipeManager from './components/RecipeManager'
+import FitnessPlanner from './components/FitnessPlanner'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -185,6 +186,7 @@ function App() {
           <Route path="/analytics-hub" element={<AnalyticsHub />} />
           <Route path="/expense-tracker" element={<ExpenseTracker />} />
           <Route path="/recipe-manager" element={<RecipeManager />} />
+          <Route path="/fitness-planner" element={<FitnessPlanner />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
