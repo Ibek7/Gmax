@@ -159,6 +159,10 @@ function App() {
           <Route path="/pomodoro-advanced" element={<PomodoroAdvanced />} />
           <Route path="/goals-tracker" element={<CreativeGoalsTracker />} />
           <Route path="/team-collab" element={<TeamCollabBoard />} />
+          <Route path="/daily-standup" element={<DailyStandup />} />
+          <Route path="/sprint-board" element={<SprintBoard />} />
+          <Route path="/mood-board" element={<MoodBoard />} />
+          <Route path="/feedback" element={<FeedbackWidget />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
