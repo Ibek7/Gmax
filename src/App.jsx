@@ -86,6 +86,7 @@ import ProgressDashboard from './components/ProgressDashboard'
 import SmartBookmarks from './components/SmartBookmarks'
 import MeetingScheduler from './components/MeetingScheduler'
 import FileManager from './components/FileManager'
+import AnalyticsHub from './components/AnalyticsHub'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -179,6 +180,7 @@ function App() {
           <Route path="/smart-bookmarks" element={<SmartBookmarks />} />
           <Route path="/meeting-scheduler" element={<MeetingScheduler />} />
           <Route path="/file-manager" element={<FileManager />} />
+          <Route path="/analytics-hub" element={<AnalyticsHub />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
