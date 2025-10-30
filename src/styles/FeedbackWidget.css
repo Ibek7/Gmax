@@ -1,0 +1,115 @@
+.feedback-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  padding: 40px 20px;
+}
+
+.feedback-header {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.feedback-header h1 {
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.feedback-form {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.feedback-form h3 {
+  margin: 0 0 20px;
+}
+
+.rating-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rating-selector button {
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.rating-selector button.active {
+  opacity: 1;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1em;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #89f7fe;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feedback-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feedback-list h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feedback-item {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.feedback-item p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.date {
+  color: #999;
+  font-size: 0.85em;
+}
