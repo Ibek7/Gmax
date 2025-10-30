@@ -80,6 +80,7 @@ import MoodBoard from './components/MoodBoard'
 import FeedbackWidget from './components/FeedbackWidget'
 import KnowledgeHub from './components/KnowledgeHub'
 import CodeReview from './components/CodeReview'
+import TimeTracker from './components/TimeTracker'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -167,6 +168,7 @@ function App() {
           <Route path="/feedback" element={<FeedbackWidget />} />
           <Route path="/knowledge-hub" element={<KnowledgeHub />} />
           <Route path="/code-review" element={<CodeReview />} />
+          <Route path="/time-tracker" element={<TimeTracker />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
