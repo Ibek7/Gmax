@@ -100,6 +100,7 @@ import MusicPlayer from './components/MusicPlayer'
 import ImageGallery from './components/ImageGallery'
 import CodeSnippetManager from './components/CodeSnippetManager'
 import TypingSpeedTest from './components/TypingSpeedTest'
+import BudgetCalculator from './components/BudgetCalculator'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -207,6 +208,7 @@ function App() {
           <Route path="/image-gallery" element={<ImageGallery />} />
           <Route path="/code-snippet-manager" element={<CodeSnippetManager />} />
           <Route path="/typing-speed-test" element={<TypingSpeedTest />} />
+          <Route path="/budget-calculator" element={<BudgetCalculator />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
