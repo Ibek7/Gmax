@@ -97,6 +97,7 @@ import PasswordGenerator from './components/PasswordGenerator'
 import MarkdownEditor from './components/MarkdownEditor'
 import CurrencyConverter from './components/CurrencyConverter'
 import MusicPlayer from './components/MusicPlayer'
+import ImageGallery from './components/ImageGallery'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -201,6 +202,7 @@ function App() {
           <Route path="/markdown-editor" element={<MarkdownEditor />} />
           <Route path="/currency-converter" element={<CurrencyConverter />} />
           <Route path="/music-player" element={<MusicPlayer />} />
+          <Route path="/image-gallery" element={<ImageGallery />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
