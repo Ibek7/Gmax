@@ -94,6 +94,7 @@ import StudyTimer from './components/StudyTimer'
 import ReadingTracker from './components/ReadingTracker'
 import WeatherDashboard from './components/WeatherDashboard'
 import PasswordGenerator from './components/PasswordGenerator'
+import MarkdownEditor from './components/MarkdownEditor'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -195,6 +196,7 @@ function App() {
           <Route path="/reading-tracker" element={<ReadingTracker />} />
           <Route path="/weather-dashboard" element={<WeatherDashboard />} />
           <Route path="/password-generator" element={<PasswordGenerator />} />
+          <Route path="/markdown-editor" element={<MarkdownEditor />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
