@@ -98,6 +98,7 @@ import MarkdownEditor from './components/MarkdownEditor'
 import CurrencyConverter from './components/CurrencyConverter'
 import MusicPlayer from './components/MusicPlayer'
 import ImageGallery from './components/ImageGallery'
+import CodeSnippetManager from './components/CodeSnippetManager'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -203,6 +204,7 @@ function App() {
           <Route path="/currency-converter" element={<CurrencyConverter />} />
           <Route path="/music-player" element={<MusicPlayer />} />
           <Route path="/image-gallery" element={<ImageGallery />} />
+          <Route path="/code-snippet-manager" element={<CodeSnippetManager />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
