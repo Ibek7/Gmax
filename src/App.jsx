@@ -95,6 +95,7 @@ import ReadingTracker from './components/ReadingTracker'
 import WeatherDashboard from './components/WeatherDashboard'
 import PasswordGenerator from './components/PasswordGenerator'
 import MarkdownEditor from './components/MarkdownEditor'
+import CurrencyConverter from './components/CurrencyConverter'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -197,6 +198,7 @@ function App() {
           <Route path="/weather-dashboard" element={<WeatherDashboard />} />
           <Route path="/password-generator" element={<PasswordGenerator />} />
           <Route path="/markdown-editor" element={<MarkdownEditor />} />
+          <Route path="/currency-converter" element={<CurrencyConverter />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
