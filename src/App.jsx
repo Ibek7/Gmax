@@ -109,6 +109,7 @@ import QuoteGenerator from './components/QuoteGenerator'
 import PomodoroTimer from './components/PomodoroTimer'
 import BMICalculator from './components/BMICalculator'
 import WordCounter from './components/WordCounter'
+import DrawingCanvas from './components/DrawingCanvas'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -225,6 +226,7 @@ function App() {
                     <Route path="/pomodoro-timer" element={<PomodoroTimer />} />
           <Route path="/bmi-calculator" element={<BMICalculator />} />
           <Route path="/word-counter" element={<WordCounter />} />
+          <Route path="/drawing-canvas" element={<DrawingCanvas />} />
         </Routes>
       </div>
     </Router>
