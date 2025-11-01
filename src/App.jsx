@@ -102,6 +102,7 @@ import CodeSnippetManager from './components/CodeSnippetManager'
 import TypingSpeedTest from './components/TypingSpeedTest'
 import BudgetCalculator from './components/BudgetCalculator'
 import MemoryGame from './components/MemoryGame'
+import RecipeBook from './components/RecipeBook'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -211,6 +212,7 @@ function App() {
           <Route path="/typing-speed-test" element={<TypingSpeedTest />} />
           <Route path="/budget-calculator" element={<BudgetCalculator />} />
           <Route path="/memory-game" element={<MemoryGame />} />
+          <Route path="/recipe-book" element={<RecipeBook />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
