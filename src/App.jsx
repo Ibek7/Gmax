@@ -108,6 +108,7 @@ import ExpenseSplitter from './components/ExpenseSplitter'
 import QuoteGenerator from './components/QuoteGenerator'
 import PomodoroTimer from './components/PomodoroTimer'
 import BMICalculator from './components/BMICalculator'
+import WordCounter from './components/WordCounter'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -223,6 +224,7 @@ function App() {
           <Route path="/quote-generator" element={<QuoteGenerator />} />
                     <Route path="/pomodoro-timer" element={<PomodoroTimer />} />
           <Route path="/bmi-calculator" element={<BMICalculator />} />
+          <Route path="/word-counter" element={<WordCounter />} />
         </Routes>
       </div>
     </Router>
