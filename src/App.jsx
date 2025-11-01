@@ -111,6 +111,7 @@ import BMICalculator from './components/BMICalculator'
 import WordCounter from './components/WordCounter'
 import DrawingCanvas from './components/DrawingCanvas'
 import TriviaQuiz from './components/TriviaQuiz'
+import UnitConverter from './components/UnitConverter'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -229,6 +230,7 @@ function App() {
           <Route path="/word-counter" element={<WordCounter />} />
           <Route path="/drawing-canvas" element={<DrawingCanvas />} />
           <Route path="/trivia-quiz" element={<TriviaQuiz />} />
+          <Route path="/unit-converter" element={<UnitConverter />} />
         </Routes>
       </div>
     </Router>
