@@ -105,6 +105,7 @@ import MemoryGame from './components/MemoryGame'
 import RecipeBook from './components/RecipeBook'
 import FlashcardApp from './components/FlashcardApp'
 import ExpenseSplitter from './components/ExpenseSplitter'
+import QuoteGenerator from './components/QuoteGenerator'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -217,6 +218,7 @@ function App() {
           <Route path="/recipe-book" element={<RecipeBook />} />
           <Route path="/flashcard-app" element={<FlashcardApp />} />
           <Route path="/expense-splitter" element={<ExpenseSplitter />} />
+          <Route path="/quote-generator" element={<QuoteGenerator />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />

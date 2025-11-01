@@ -1,0 +1,343 @@
+.quote-generator-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.quote-header {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.quote-header h1 {
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+.category-selector {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-selector button {
+  padding: 12px 25px;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.category-selector button.active {
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.quote-display {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.quote-card {
+  background: white;
+  padding: 60px;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-left: 8px solid;
+  position: relative;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-category-badge {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-transform: capitalize;
+}
+
+.quote-icon {
+  font-size: 4em;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-size: 2em;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 30px;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 1.3em;
+  color: #666;
+  text-align: right;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.favorite-btn,
+.copy-btn,
+.share-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.favorite-btn {
+  background: #f8f9fa;
+  color: #666;
+}
+
+.favorite-btn.active {
+  background: #ff4081;
+  color: white;
+}
+
+.copy-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.share-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.favorite-btn:hover,
+.copy-btn:hover,
+.share-btn:hover {
+  transform: translateY(-2px);
+}
+
+.generator-controls {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.generate-btn,
+.view-favorites-btn {
+  padding: 18px 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+}
+
+.generate-btn {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.view-favorites-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+}
+
+.generate-btn:hover,
+.view-favorites-btn:hover {
+  transform: translateY(-2px);
+}
+
+.quote-stats {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat-value {
+  display: block;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.favorites-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.favorite-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-left: 6px solid;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.favorite-category {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #666;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.favorite-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 15px;
+  font-style: italic;
+}
+
+.favorite-author {
+  font-size: 1em;
+  color: #888;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.favorite-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #f0f0f0;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.action-btn.remove {
+  background: #ff5252;
+  color: white;
+}
+
+.action-btn:hover {
+  transform: scale(1.02);
+}
+
+.empty-favorites {
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  font-size: 1.3em;
+}
+
+@media (max-width: 768px) {
+  .quote-card {
+    padding: 40px 30px;
+  }
+
+  .quote-text {
+    font-size: 1.5em;
+  }
+
+  .quote-actions {
+    flex-direction: column;
+  }
+
+  .generator-controls {
+    flex-direction: column;
+  }
+
+  .quote-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+}
