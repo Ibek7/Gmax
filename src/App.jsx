@@ -112,6 +112,7 @@ import WordCounter from './components/WordCounter'
 import DrawingCanvas from './components/DrawingCanvas'
 import TriviaQuiz from './components/TriviaQuiz'
 import UnitConverter from './components/UnitConverter'
+import PasswordGenerator from './components/PasswordGenerator'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -231,6 +232,7 @@ function App() {
           <Route path="/drawing-canvas" element={<DrawingCanvas />} />
           <Route path="/trivia-quiz" element={<TriviaQuiz />} />
           <Route path="/unit-converter" element={<UnitConverter />} />
+          <Route path="/password-generator" element={<PasswordGenerator />} />
         </Routes>
       </div>
     </Router>
