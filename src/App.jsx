@@ -106,6 +106,7 @@ import RecipeBook from './components/RecipeBook'
 import FlashcardApp from './components/FlashcardApp'
 import ExpenseSplitter from './components/ExpenseSplitter'
 import QuoteGenerator from './components/QuoteGenerator'
+import PomodoroTimer from './components/PomodoroTimer'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -219,6 +220,7 @@ function App() {
           <Route path="/flashcard-app" element={<FlashcardApp />} />
           <Route path="/expense-splitter" element={<ExpenseSplitter />} />
           <Route path="/quote-generator" element={<QuoteGenerator />} />
+          <Route path="/pomodoro-timer" element={<PomodoroTimer />} />
             <Route path="/productivity" element={<ProductivityTracker />} />
             <Route path="/settings" element={<UserSettings />} />
             <Route path="/data" element={<DataManager />} />
