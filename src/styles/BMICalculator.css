@@ -1,0 +1,283 @@
+.bmi-calculator-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  padding: 40px 20px;
+}
+
+.bmi-header {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bmi-header h1 {
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+.calculator-card,
+.ideal-weight-card,
+.bmi-chart,
+.health-tips-card,
+.info-card {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.unit-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: #f0f0f0;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.unit-toggle button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.unit-toggle button.active {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.calculate-btn,
+.reset-btn {
+  flex: 1;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+}
+
+.calculate-btn {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.reset-btn {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.calculate-btn:hover,
+.reset-btn:hover {
+  transform: translateY(-2px);
+}
+
+.results-section {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bmi-result-card {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-left: 8px solid;
+}
+
+.result-main {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.result-emoji {
+  font-size: 5em;
+}
+
+.result-value-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result-label {
+  color: #666;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-value {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.result-category {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.ideal-weight-card h3,
+.bmi-chart h3,
+.health-tips-card h3,
+.info-card h3 {
+  margin: 0 0 20px;
+  color: #333;
+  font-size: 1.6em;
+}
+
+.ideal-range {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #4facfe;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.ideal-note {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chart-bar {
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+.chart-bar.underweight {
+  background: #2196f3;
+}
+
+.chart-bar.normal {
+  background: #4caf50;
+}
+
+.chart-bar.overweight {
+  background: #ff9800;
+}
+
+.chart-bar.obese {
+  background: #f44336;
+}
+
+.health-tips-card ul,
+.info-card p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.health-tips-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.health-tips-card li {
+  padding: 12px 0;
+  padding-left: 35px;
+  position: relative;
+}
+
+.health-tips-card li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4facfe;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.info-card p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .result-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}
