@@ -114,6 +114,7 @@ import TriviaQuiz from './components/TriviaQuiz'
 import UnitConverter from './components/UnitConverter'
 import PasswordGenerator from './components/PasswordGenerator'
 import QRCodeGenerator from './components/QRCodeGenerator'
+import MarkdownEditor from './components/MarkdownEditor'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -235,6 +236,7 @@ function App() {
           <Route path="/unit-converter" element={<UnitConverter />} />
           <Route path="/password-generator" element={<PasswordGenerator />} />
           <Route path="/qr-code-generator" element={<QRCodeGenerator />} />
+          <Route path="/markdown-editor" element={<MarkdownEditor />} />
         </Routes>
       </div>
     </Router>
