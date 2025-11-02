@@ -1,0 +1,253 @@
+.color-palette-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.palette-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.palette-header h1 {
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+.generator-card {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.color-picker-section label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.picker-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.color-input-large {
+  width: 150px;
+  height: 80px;
+  border: 3px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.hex-input {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.generate-btn {
+  padding: 20px 40px;
+  border: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+}
+
+.palettes-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.palette-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.palette-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.palette-card-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.save-palette-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.save-palette-btn:hover {
+  transform: scale(1.05);
+}
+
+.colors-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.color-box {
+  flex: 1;
+  min-width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.color-box:hover {
+  transform: scale(1.05);
+}
+
+.color-hex {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.saved-palettes-section {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.saved-palettes-section h2 {
+  margin: 0 0 30px;
+  color: #333;
+  font-size: 2em;
+}
+
+.saved-palette-item {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.saved-palette-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.saved-palette-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3em;
+  flex: 1;
+}
+
+.palette-timestamp {
+  color: #999;
+  font-size: 0.9em;
+}
+
+.delete-palette-btn {
+  background: #f44336;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.delete-palette-btn:hover {
+  transform: scale(1.1);
+}
+
+.color-box-small {
+  flex: 1;
+  min-width: 100px;
+  height: 80px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-box-small:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .picker-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .color-input-large {
+    width: 100%;
+  }
+
+  .colors-row {
+    flex-direction: column;
+  }
+
+  .color-box {
+    min-width: 100%;
+  }
+}

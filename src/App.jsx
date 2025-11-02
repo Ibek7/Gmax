@@ -115,6 +115,7 @@ import UnitConverter from './components/UnitConverter'
 import PasswordGenerator from './components/PasswordGenerator'
 import QRCodeGenerator from './components/QRCodeGenerator'
 import MarkdownEditor from './components/MarkdownEditor'
+import ColorPaletteGenerator from './components/ColorPaletteGenerator'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
@@ -237,6 +238,7 @@ function App() {
           <Route path="/password-generator" element={<PasswordGenerator />} />
           <Route path="/qr-code-generator" element={<QRCodeGenerator />} />
           <Route path="/markdown-editor" element={<MarkdownEditor />} />
+          <Route path="/color-palette-generator" element={<ColorPaletteGenerator />} />
         </Routes>
       </div>
     </Router>
