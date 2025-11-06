@@ -7,6 +7,7 @@ import MarkdownEditor from './components/MarkdownEditor'
 import ThemePresets from './components/ThemePresets'
 import ImageCompressor from './components/ImageCompressor'
 import Stopwatch from './components/Stopwatch'
+import ColorContrast from './components/ColorContrast'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -27,6 +28,7 @@ function App() {
             <Route path="/theme-presets" element={<ThemePresets />} />
             <Route path="/image-compressor" element={<ImageCompressor />} />
             <Route path="/stopwatch" element={<Stopwatch />} />
+            <Route path="/color-contrast" element={<ColorContrast />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
