@@ -1,0 +1,10 @@
+.csv-importer-container { min-height: 100vh; background: linear-gradient(135deg,#fff1e6 0%,#ffd6a5 100%); padding: 40px 20px; }
+.csv-header { max-width: 900px; margin: 0 auto 30px; display:flex; gap:20px; align-items:center }
+.csv-header h1 { margin:0; }
+.csv-card { max-width:900px; margin:0 auto; background:white; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.08) }
+.csv-preview { margin-top:20px }
+.csv-preview table { width:100%; border-collapse:collapse }
+.csv-preview th, .csv-preview td { padding:8px 10px; border-bottom:1px solid #eee; text-align:left }
+.csv-actions { margin-top:15px }
+.csv-actions .btn.import { padding:10px 18px; background:linear-gradient(90deg,#ffb347,#ffcc33); border:none; border-radius:8px; cursor:pointer }
+.csv-errors { margin-top:12px; color:#b00020 }

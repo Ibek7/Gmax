@@ -1,0 +1,52 @@
+.ambient-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff 0%, #e6fffa 100%);
+  padding: 36px 20px;
+}
+
+.ambient-header {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ambient-header h1 {
+  color: #333;
+  font-size: 2em;
+  margin: 0;
+}
+
+.back-btn { background: white; padding: 8px 16px; border-radius: 10px; border: none; cursor: pointer; }
+
+.ambient-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.controls-row { display:flex; gap:12px; align-items:center; margin-bottom:18px; }
+
+.play-btn { padding:10px 18px; border-radius:10px; border:none; background:#4caf50; color:white; cursor:pointer; }
+.play-btn.active { background:#f44336 }
+.reset-btn { padding:8px 14px; border-radius:10px; border:1px solid #eee; background:#fff; cursor:pointer }
+
+.master-volume { margin-left: auto; display:flex; flex-direction:column; gap:6px; align-items:flex-end }
+.master-volume input { width:200px }
+
+.sound-list { display:flex; flex-direction:column; gap:14px }
+.sound-item { display:flex; flex-direction:column; gap:8px }
+.sound-meta { display:flex; justify-content:space-between; align-items:center }
+.sound-label { font-weight:700 }
+.sound-actions { display:flex; gap:8px }
+.quick-btn { padding:6px 10px; border-radius:8px; border:none; background:#f0f0f0; cursor:pointer }
+
+.ambient-info { margin-top:16px; color:#666 }
+
+@media (max-width:768px) {
+  .master-volume input { width:120px }
+}
