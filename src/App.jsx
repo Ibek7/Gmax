@@ -13,6 +13,7 @@ import LoremIpsum from './components/LoremIpsum'
 import RegexTester from './components/RegexTester'
 import URLTool from './components/URLTool'
 import HashGenerator from './components/HashGenerator'
+import DiffChecker from './components/DiffChecker'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -39,6 +40,7 @@ function App() {
             <Route path="/regex-tester" element={<RegexTester />} />
             <Route path="/url-tool" element={<URLTool />} />
             <Route path="/hash-generator" element={<HashGenerator />} />
+            <Route path="/diff-checker" element={<DiffChecker />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
