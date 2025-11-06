@@ -17,6 +17,7 @@ import DiffChecker from './components/DiffChecker'
 import CronBuilder from './components/CronBuilder'
 import TimestampConverter from './components/TimestampConverter'
 import IPInfo from './components/IPInfo'
+import GradientGenerator from './components/GradientGenerator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -47,6 +48,7 @@ function App() {
             <Route path="/cron-builder" element={<CronBuilder />} />
             <Route path="/timestamp-converter" element={<TimestampConverter />} />
             <Route path="/ip-info" element={<IPInfo />} />
+            <Route path="/gradient-generator" element={<GradientGenerator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
