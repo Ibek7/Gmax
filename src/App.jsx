@@ -20,6 +20,7 @@ import IPInfo from './components/IPInfo'
 import GradientGenerator from './components/GradientGenerator'
 import JSONFormatter from './components/JSONFormatter'
 import QRCodeGenerator from './components/QRCodeGenerator'
+import ColorPaletteGenerator from './components/ColorPaletteGenerator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -53,6 +54,7 @@ function App() {
             <Route path="/gradient-generator" element={<GradientGenerator />} />
             <Route path="/json-formatter" element={<JSONFormatter />} />
             <Route path="/qr-code-generator" element={<QRCodeGenerator />} />
+            <Route path="/color-palette-generator" element={<ColorPaletteGenerator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
