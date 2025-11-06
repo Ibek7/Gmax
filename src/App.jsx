@@ -11,6 +11,7 @@ import ColorContrast from './components/ColorContrast'
 import Base64Tool from './components/Base64Tool'
 import LoremIpsum from './components/LoremIpsum'
 import RegexTester from './components/RegexTester'
+import URLTool from './components/URLTool'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -35,6 +36,7 @@ function App() {
             <Route path="/base64-tool" element={<Base64Tool />} />
             <Route path="/lorem-ipsum" element={<LoremIpsum />} />
             <Route path="/regex-tester" element={<RegexTester />} />
+            <Route path="/url-tool" element={<URLTool />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
