@@ -9,6 +9,7 @@ import ImageCompressor from './components/ImageCompressor'
 import Stopwatch from './components/Stopwatch'
 import ColorContrast from './components/ColorContrast'
 import Base64Tool from './components/Base64Tool'
+import LoremIpsum from './components/LoremIpsum'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -31,6 +32,7 @@ function App() {
             <Route path="/stopwatch" element={<Stopwatch />} />
             <Route path="/color-contrast" element={<ColorContrast />} />
             <Route path="/base64-tool" element={<Base64Tool />} />
+            <Route path="/lorem-ipsum" element={<LoremIpsum />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
