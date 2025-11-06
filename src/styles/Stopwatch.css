@@ -1,0 +1,277 @@
+.stopwatch-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde047 100%);
+  padding: 40px 20px;
+}
+
+.stopwatch-header {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stopwatch-header h1 {
+  color: #333;
+  font-size: 2em;
+  margin: 0;
+}
+
+.stopwatch-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.timer-display {
+  font-size: 5em;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.start-btn {
+  background: linear-gradient(90deg, #10b981, #059669);
+  color: white;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px);
+}
+
+.pause-btn {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.lap-btn {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.lap-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  background: #f3f4f6;
+  color: #666;
+}
+
+.reset-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.save-btn {
+  background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+  color: white;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.laps-section, .history-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.laps-header, .history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.laps-header h3, .history-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.lap-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.best-lap {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.worst-lap {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.laps-list, .history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.lap-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+.lap-item.best {
+  background: #d1fae5;
+  border-left: 4px solid #10b981;
+}
+
+.lap-item.worst {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+}
+
+.lap-number {
+  font-weight: 600;
+  color: #666;
+}
+
+.lap-time {
+  font-weight: 700;
+  color: #333;
+}
+
+.total-time {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.history-info {
+  flex: 1;
+}
+
+.history-date {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.history-details {
+  font-size: 14px;
+  color: #666;
+  font-family: 'Courier New', monospace;
+}
+
+.history-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.export-btn, .delete-btn, .clear-history-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.export-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.export-btn:hover {
+  background: #2563eb;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+.clear-history-btn {
+  background: #f3f4f6;
+  color: #666;
+}
+
+.clear-history-btn:hover {
+  background: #e5e7eb;
+}
+
+@media (max-width: 768px) {
+  .timer-display {
+    font-size: 3em;
+  }
+  
+  .controls {
+    flex-direction: column;
+  }
+  
+  .controls button {
+    width: 100%;
+  }
+  
+  .lap-stats {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+  }
+  
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .history-actions {
+    width: 100%;
+  }
+  
+  .export-btn, .delete-btn {
+    flex: 1;
+  }
+}
