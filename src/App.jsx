@@ -15,6 +15,7 @@ import URLTool from './components/URLTool'
 import HashGenerator from './components/HashGenerator'
 import DiffChecker from './components/DiffChecker'
 import CronBuilder from './components/CronBuilder'
+import TimestampConverter from './components/TimestampConverter'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -43,6 +44,7 @@ function App() {
             <Route path="/hash-generator" element={<HashGenerator />} />
             <Route path="/diff-checker" element={<DiffChecker />} />
             <Route path="/cron-builder" element={<CronBuilder />} />
+            <Route path="/timestamp-converter" element={<TimestampConverter />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
