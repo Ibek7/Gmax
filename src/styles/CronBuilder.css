@@ -1,0 +1,384 @@
+.cron-builder {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  padding: 2rem;
+}
+
+.back-button {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cron-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cron-container h1 {
+  color: #a855f7;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.cron-output {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.expression-display h3,
+.human-readable h3 {
+  color: #1f2937;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.expression-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  border: 2px solid #d8b4fe;
+  border-radius: 12px;
+}
+
+.expression-box code {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  color: #7c3aed;
+  font-weight: bold;
+}
+
+.copy-btn {
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.human-readable {
+  padding: 1.5rem;
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.human-readable p {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.presets {
+  margin-bottom: 2rem;
+}
+
+.presets h3 {
+  color: #1f2937;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.preset-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.preset-btn {
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #374151;
+  text-align: left;
+}
+
+.preset-btn:hover {
+  border-color: #a855f7;
+  color: #a855f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+}
+
+.cron-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.field-hint {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.field-group input {
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  transition: border-color 0.3s ease;
+}
+
+.field-group input:focus {
+  outline: none;
+  border-color: #a855f7;
+}
+
+.examples {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.examples button {
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #4b5563;
+  transition: all 0.3s ease;
+}
+
+.examples button:hover {
+  background: #a855f7;
+  color: white;
+  border-color: #a855f7;
+}
+
+.next-runs {
+  margin-bottom: 2rem;
+}
+
+.next-runs h3 {
+  color: #1f2937;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.run-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.run-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  border: 2px solid #d8b4fe;
+  border-radius: 8px;
+}
+
+.run-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #a855f7;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.run-date {
+  font-family: 'Courier New', monospace;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.info-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.info-section h3 {
+  color: #1f2937;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.format-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  border-radius: 12px;
+  border: 2px solid #d8b4fe;
+}
+
+.format-info code {
+  display: block;
+  font-size: 2rem;
+  color: #7c3aed;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.format-labels {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.format-labels span {
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.info-item {
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+}
+
+.info-item strong {
+  display: block;
+  color: #a855f7;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.info-item p {
+  color: #4b5563;
+  line-height: 1.8;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.info-item code {
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .cron-builder {
+    padding: 1rem;
+  }
+
+  .cron-container {
+    padding: 1.5rem;
+  }
+
+  .cron-container h1 {
+    font-size: 2rem;
+  }
+
+  .cron-output {
+    grid-template-columns: 1fr;
+  }
+
+  .expression-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .expression-box code {
+    font-size: 1.2rem;
+  }
+
+  .copy-btn {
+    width: 100%;
+  }
+
+  .cron-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .format-info code {
+    font-size: 1.5rem;
+  }
+
+  .format-labels {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
