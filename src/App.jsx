@@ -4,6 +4,7 @@ import Navigation from './components/Navigation'
 import Dashboard from './components/Dashboard'
 import CSVImporter from './components/CSVImporter'
 import MarkdownEditor from './components/MarkdownEditor'
+import ThemePresets from './components/ThemePresets'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -21,6 +22,7 @@ function App() {
             <Route path="/ambient-noise" element={<AmbientNoise />} />
             <Route path="/csv-importer" element={<CSVImporter />} />
             <Route path="/markdown-editor" element={<MarkdownEditor />} />
+            <Route path="/theme-presets" element={<ThemePresets />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
