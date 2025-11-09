@@ -30,6 +30,7 @@ import ImageToBase64 from './components/ImageToBase64'
 import PasswordGenerator from './components/PasswordGenerator'
 import CSSMinifier from './components/CSSMinifier'
 import HTMLEntityEncoder from './components/HTMLEntityEncoder'
+import StringUtilities from './components/StringUtilities'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -73,6 +74,7 @@ function App() {
             <Route path="/password-generator" element={<PasswordGenerator />} />
             <Route path="/css-minifier" element={<CSSMinifier />} />
             <Route path="/html-entity-encoder" element={<HTMLEntityEncoder />} />
+            <Route path="/string-utilities" element={<StringUtilities />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
