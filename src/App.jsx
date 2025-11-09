@@ -24,6 +24,7 @@ import ColorPaletteGenerator from './components/ColorPaletteGenerator'
 import JWTDecoder from './components/JWTDecoder'
 import MarkdownPreviewer from './components/MarkdownPreviewer'
 import CaseConverter from './components/CaseConverter'
+import UUIDGenerator from './components/UUIDGenerator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -61,6 +62,7 @@ function App() {
             <Route path="/jwt-decoder" element={<JWTDecoder />} />
             <Route path="/markdown-previewer" element={<MarkdownPreviewer />} />
             <Route path="/case-converter" element={<CaseConverter />} />
+            <Route path="/uuid-generator" element={<UUIDGenerator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
