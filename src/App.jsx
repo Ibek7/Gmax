@@ -29,6 +29,7 @@ import SQLFormatter from './components/SQLFormatter'
 import ImageToBase64 from './components/ImageToBase64'
 import PasswordGenerator from './components/PasswordGenerator'
 import CSSMinifier from './components/CSSMinifier'
+import HTMLEntityEncoder from './components/HTMLEntityEncoder'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -71,6 +72,7 @@ function App() {
             <Route path="/image-to-base64" element={<ImageToBase64 />} />
             <Route path="/password-generator" element={<PasswordGenerator />} />
             <Route path="/css-minifier" element={<CSSMinifier />} />
+            <Route path="/html-entity-encoder" element={<HTMLEntityEncoder />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
