@@ -36,6 +36,7 @@ import SlugGenerator from './components/SlugGenerator'
 import JavaScriptFormatter from './components/JavaScriptFormatter'
 import TextGenerator from './components/TextGenerator'
 import StringEscaper from './components/StringEscaper'
+import NumberBaseConverter from './components/NumberBaseConverter'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -85,6 +86,7 @@ function App() {
             <Route path="/javascript-formatter" element={<JavaScriptFormatter />} />
             <Route path="/text-generator" element={<TextGenerator />} />
             <Route path="/string-escaper" element={<StringEscaper />} />
+            <Route path="/number-base-converter" element={<NumberBaseConverter />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
