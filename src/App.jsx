@@ -43,6 +43,7 @@ import TextEncodingConverter from './components/TextEncodingConverter'
 import XMLFormatter from './components/XMLFormatter'
 import HTTPStatusReference from './components/HTTPStatusReference'
 import MockDataGenerator from './components/MockDataGenerator'
+import JSONDiffViewer from './components/JSONDiffViewer'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -99,6 +100,7 @@ function App() {
             <Route path="/xml-formatter" element={<XMLFormatter />} />
             <Route path="/http-status-reference" element={<HTTPStatusReference />} />
             <Route path="/mock-data-generator" element={<MockDataGenerator />} />
+            <Route path="/json-diff-viewer" element={<JSONDiffViewer />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
