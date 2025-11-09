@@ -1,0 +1,234 @@
+.text-encoding-converter {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  padding: 2rem;
+}
+
+.back-button {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.converter-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.converter-container h1 {
+  color: #6366f1;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sample-btn,
+.clear-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sample-btn {
+  background: white;
+  border: 2px solid #6366f1;
+  color: #6366f1;
+}
+
+.clear-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+.sample-btn:hover {
+  background: #6366f1;
+  color: white;
+}
+
+.clear-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.input-section {
+  margin-bottom: 2rem;
+}
+
+.input-section h3 {
+  color: #1f2937;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.input-section textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  line-height: 1.6;
+}
+
+.input-section textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.encodings-section {
+  margin-bottom: 0;
+}
+
+.encodings-section h3 {
+  color: #1f2937;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.encoding-card {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  border: 2px solid #a5b4fc;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.encoding-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.encoding-header h4 {
+  color: #6366f1;
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+  font-weight: 700;
+}
+
+.encoding-info {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.encoding-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.copy-btn,
+.decode-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.copy-btn {
+  background: white;
+  border: 2px solid #6366f1;
+  color: #6366f1;
+}
+
+.decode-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+}
+
+.copy-btn:hover {
+  background: #6366f1;
+  color: white;
+}
+
+.decode-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.encoding-value {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #1f2937;
+  word-break: break-all;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  line-height: 1.6;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.encoding-value.small-text {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .text-encoding-converter {
+    padding: 1rem;
+  }
+
+  .converter-container {
+    padding: 1.5rem;
+  }
+
+  .converter-container h1 {
+    font-size: 2rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .encoding-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .encoding-actions {
+    width: 100%;
+  }
+
+  .copy-btn,
+  .decode-btn {
+    flex: 1;
+  }
+
+  .encoding-value {
+    font-size: 0.8rem;
+  }
+}
