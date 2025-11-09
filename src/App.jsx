@@ -45,6 +45,7 @@ import HTTPStatusReference from './components/HTTPStatusReference'
 import MockDataGenerator from './components/MockDataGenerator'
 import JSONDiffViewer from './components/JSONDiffViewer'
 import PlaceholderImageGenerator from './components/PlaceholderImageGenerator'
+import CSSUnitConverter from './components/CSSUnitConverter'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -103,6 +104,7 @@ function App() {
             <Route path="/mock-data-generator" element={<MockDataGenerator />} />
             <Route path="/json-diff-viewer" element={<JSONDiffViewer />} />
             <Route path="/placeholder-image-generator" element={<PlaceholderImageGenerator />} />
+            <Route path="/css-unit-converter" element={<CSSUnitConverter />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
