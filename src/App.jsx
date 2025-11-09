@@ -34,6 +34,7 @@ import StringUtilities from './components/StringUtilities'
 import JSONToCSV from './components/JSONToCSV'
 import SlugGenerator from './components/SlugGenerator'
 import JavaScriptFormatter from './components/JavaScriptFormatter'
+import TextGenerator from './components/TextGenerator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -81,6 +82,7 @@ function App() {
             <Route path="/json-to-csv" element={<JSONToCSV />} />
             <Route path="/slug-generator" element={<SlugGenerator />} />
             <Route path="/javascript-formatter" element={<JavaScriptFormatter />} />
+            <Route path="/text-generator" element={<TextGenerator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
