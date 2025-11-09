@@ -28,6 +28,7 @@ import UUIDGenerator from './components/UUIDGenerator'
 import SQLFormatter from './components/SQLFormatter'
 import ImageToBase64 from './components/ImageToBase64'
 import PasswordGenerator from './components/PasswordGenerator'
+import CSSMinifier from './components/CSSMinifier'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -69,6 +70,7 @@ function App() {
             <Route path="/sql-formatter" element={<SQLFormatter />} />
             <Route path="/image-to-base64" element={<ImageToBase64 />} />
             <Route path="/password-generator" element={<PasswordGenerator />} />
+            <Route path="/css-minifier" element={<CSSMinifier />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
