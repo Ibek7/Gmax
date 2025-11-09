@@ -26,6 +26,7 @@ import MarkdownPreviewer from './components/MarkdownPreviewer'
 import CaseConverter from './components/CaseConverter'
 import UUIDGenerator from './components/UUIDGenerator'
 import SQLFormatter from './components/SQLFormatter'
+import ImageToBase64 from './components/ImageToBase64'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -65,6 +66,7 @@ function App() {
             <Route path="/case-converter" element={<CaseConverter />} />
             <Route path="/uuid-generator" element={<UUIDGenerator />} />
             <Route path="/sql-formatter" element={<SQLFormatter />} />
+            <Route path="/image-to-base64" element={<ImageToBase64 />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
