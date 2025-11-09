@@ -27,6 +27,7 @@ import CaseConverter from './components/CaseConverter'
 import UUIDGenerator from './components/UUIDGenerator'
 import SQLFormatter from './components/SQLFormatter'
 import ImageToBase64 from './components/ImageToBase64'
+import PasswordGenerator from './components/PasswordGenerator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -67,6 +68,7 @@ function App() {
             <Route path="/uuid-generator" element={<UUIDGenerator />} />
             <Route path="/sql-formatter" element={<SQLFormatter />} />
             <Route path="/image-to-base64" element={<ImageToBase64 />} />
+            <Route path="/password-generator" element={<PasswordGenerator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
