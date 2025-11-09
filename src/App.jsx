@@ -41,6 +41,7 @@ import UserAgentParser from './components/UserAgentParser'
 import ChecksumGenerator from './components/ChecksumGenerator'
 import TextEncodingConverter from './components/TextEncodingConverter'
 import XMLFormatter from './components/XMLFormatter'
+import HTTPStatusReference from './components/HTTPStatusReference'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -95,6 +96,7 @@ function App() {
             <Route path="/checksum-generator" element={<ChecksumGenerator />} />
             <Route path="/text-encoding-converter" element={<TextEncodingConverter />} />
             <Route path="/xml-formatter" element={<XMLFormatter />} />
+            <Route path="/http-status-reference" element={<HTTPStatusReference />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
