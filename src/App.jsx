@@ -54,6 +54,7 @@ import LoremTextVariants from './components/LoremTextVariants'
 import ImageMetadataExtractor from './components/ImageMetadataExtractor'
 import CodeDiffTool from './components/CodeDiffTool'
 import RegexLibrary from './components/RegexLibrary'
+import DevOpsCalculator from './components/DevOpsCalculator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -121,6 +122,7 @@ function App() {
             <Route path="/image-metadata-extractor" element={<ImageMetadataExtractor />} />
             <Route path="/code-diff-tool" element={<CodeDiffTool />} />
             <Route path="/regex-library" element={<RegexLibrary />} />
+            <Route path="/devops-calculator" element={<DevOpsCalculator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
