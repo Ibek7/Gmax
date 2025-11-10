@@ -53,6 +53,7 @@ import MarkdownTableGenerator from './components/MarkdownTableGenerator'
 import LoremTextVariants from './components/LoremTextVariants'
 import ImageMetadataExtractor from './components/ImageMetadataExtractor'
 import CodeDiffTool from './components/CodeDiffTool'
+import RegexLibrary from './components/RegexLibrary'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -119,6 +120,7 @@ function App() {
             <Route path="/lorem-text-variants" element={<LoremTextVariants />} />
             <Route path="/image-metadata-extractor" element={<ImageMetadataExtractor />} />
             <Route path="/code-diff-tool" element={<CodeDiffTool />} />
+            <Route path="/regex-library" element={<RegexLibrary />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
