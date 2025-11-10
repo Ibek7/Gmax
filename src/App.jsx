@@ -52,6 +52,7 @@ import ColorPickerTool from './components/ColorPickerTool'
 import MarkdownTableGenerator from './components/MarkdownTableGenerator'
 import LoremTextVariants from './components/LoremTextVariants'
 import ImageMetadataExtractor from './components/ImageMetadataExtractor'
+import CodeDiffTool from './components/CodeDiffTool'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -117,6 +118,7 @@ function App() {
             <Route path="/markdown-table-generator" element={<MarkdownTableGenerator />} />
             <Route path="/lorem-text-variants" element={<LoremTextVariants />} />
             <Route path="/image-metadata-extractor" element={<ImageMetadataExtractor />} />
+            <Route path="/code-diff-tool" element={<CodeDiffTool />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
