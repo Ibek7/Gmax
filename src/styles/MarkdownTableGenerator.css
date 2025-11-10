@@ -1,0 +1,361 @@
+.markdown-table-generator {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dfe6e9 0%, #b2bec3 100%);
+  padding: 2rem;
+}
+
+.back-button {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.generator-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.generator-container h1 {
+  color: #2d3436;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.controls-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.size-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2d3436;
+  cursor: pointer;
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2d3436;
+  cursor: pointer;
+  border: none;
+}
+
+.control-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.control-group select:focus {
+  outline: none;
+  border-color: #2d3436;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.init-btn, .sample-btn, .generate-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.init-btn {
+  background: #74b9ff;
+  color: white;
+}
+
+.init-btn:hover {
+  background: #0984e3;
+  transform: translateY(-2px);
+}
+
+.sample-btn {
+  background: #55efc4;
+  color: #2d3436;
+}
+
+.sample-btn:hover {
+  background: #00b894;
+  transform: translateY(-2px);
+}
+
+.generate-btn {
+  background: #2d3436;
+  color: white;
+}
+
+.generate-btn:hover {
+  background: #636e72;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 52, 54, 0.3);
+}
+
+.table-editor-section,
+.markdown-output-section {
+  margin-bottom: 2rem;
+}
+
+.table-editor-section h3,
+.markdown-output-section h3 {
+  color: #374151;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.editable-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9fafb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.editable-table th,
+.editable-table td {
+  padding: 0.5rem;
+  border: 2px solid #e5e7eb;
+}
+
+.editable-table th {
+  background: #2d3436;
+  color: white;
+  font-weight: 600;
+}
+
+.editable-table input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: border-color 0.3s ease;
+}
+
+.editable-table input:focus {
+  outline: none;
+  border-color: #2d3436;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.output-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.copy-btn, .download-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.copy-btn {
+  background: #10b981;
+  color: white;
+}
+
+.copy-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.download-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.download-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.markdown-code {
+  background: #1f2937;
+  color: #10b981;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.preview-table {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.preview-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview-table th,
+.preview-table td {
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.preview-table th {
+  background: #f3f4f6;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.preview-table td {
+  color: #4b5563;
+}
+
+.info-section {
+  background: #f0f9ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #bae6fd;
+}
+
+.info-section h3 {
+  color: #0369a1;
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+}
+
+.info-section ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #075985;
+}
+
+.info-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.info-section li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .markdown-table-generator {
+    padding: 1rem;
+  }
+
+  .generator-container {
+    padding: 1.5rem;
+  }
+
+  .generator-container h1 {
+    font-size: 2rem;
+  }
+
+  .size-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .init-btn, .sample-btn, .generate-btn {
+    width: 100%;
+  }
+
+  .output-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .output-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .copy-btn, .download-btn {
+    width: 100%;
+  }
+}

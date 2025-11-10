@@ -49,6 +49,7 @@ import CSSUnitConverter from './components/CSSUnitConverter'
 import APIKeyGenerator from './components/APIKeyGenerator'
 import ASCIIArtGenerator from './components/ASCIIArtGenerator'
 import ColorPickerTool from './components/ColorPickerTool'
+import MarkdownTableGenerator from './components/MarkdownTableGenerator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -111,6 +112,7 @@ function App() {
             <Route path="/api-key-generator" element={<APIKeyGenerator />} />
             <Route path="/ascii-art-generator" element={<ASCIIArtGenerator />} />
             <Route path="/color-picker-tool" element={<ColorPickerTool />} />
+            <Route path="/markdown-table-generator" element={<MarkdownTableGenerator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
