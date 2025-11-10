@@ -57,6 +57,7 @@ import RegexLibrary from './components/RegexLibrary'
 import DevOpsCalculator from './components/DevOpsCalculator'
 import GitCommandReference from './components/GitCommandReference'
 import BrowserCompatibilityChecker from './components/BrowserCompatibilityChecker'
+import PerformanceBudgetCalculator from './components/PerformanceBudgetCalculator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
@@ -127,6 +128,7 @@ function App() {
             <Route path="/devops-calculator" element={<DevOpsCalculator />} />
             <Route path="/git-command-reference" element={<GitCommandReference />} />
             <Route path="/browser-compatibility-checker" element={<BrowserCompatibilityChecker />} />
+            <Route path="/performance-budget-calculator" element={<PerformanceBudgetCalculator />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
