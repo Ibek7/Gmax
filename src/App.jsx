@@ -62,6 +62,9 @@ import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import './styles/App.css'
 
+/**
+ * Main application component handling routing and layout.
+ */
 function App() {
   const [currentTheme, setCurrentTheme] = useState('default')
 
