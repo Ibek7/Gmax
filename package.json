@@ -11,7 +11,18 @@
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,html}"
   },
-  "keywords": ["creative", "interactive", "web-app", "games", "art", "music"],
+  "keywords": [
+    "creative",
+    "interactive",
+    "web-app",
+    "games",
+    "art",
+    "music",
+    "writing",
+    "code-showcase",
+    "react",
+    "vite"
+  ],
   "author": "bekamguta",
   "license": "MIT",
   "dependencies": {
