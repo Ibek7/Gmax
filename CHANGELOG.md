@@ -2,6 +2,18 @@
 
 All notable changes to Gmax Creative Studio will be documented in this file.
 
+## [Unreleased]
+
+### 🚀 Enhancements
+- Added `CONTRIBUTING.md` for contributor guidelines.
+- Added `TODO.md` to track future tasks.
+- Improved documentation in `README.md`.
+- Added JSDoc comments to `App.jsx` and `main.jsx`.
+- Expanded `package.json` keywords and metadata.
+- Added new inspirational quotes.
+- Added Z-index variables to the design system.
+- Added `.editorconfig` for consistent coding style.
+
 ## [1.0.0] - 2024-10-09
 
 ### 🎉 Initial Release
