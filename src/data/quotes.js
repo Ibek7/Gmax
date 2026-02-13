@@ -5,6 +5,11 @@ export const quotes = [
     category: "creativity"
   },
   {
+    text: "The best way to predict the future is to create it.",
+    author: "Peter Drucker",
+    category: "innovation"
+  },
+  {
     text: "The way to get started is to quit talking and begin doing.",
     author: "Walt Disney",
     category: "motivation"
