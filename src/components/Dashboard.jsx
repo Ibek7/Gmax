@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getRandomQuote } from '../data/quotes'
+import { getCurrentTime, formatDuration } from '../utils/helpers'
 import '../styles/Dashboard.css'
 import RecentProjectsSidebar from './RecentProjectsSidebar'
 import ThemeSwitcher from './ThemeSwitcher'
@@ -13,19 +14,19 @@ const Dashboard = () => {
   const [completedTasks, setCompletedTasks] = useState(0)
   const [todaysQuote, setTodaysQuote] = useState(getRandomQuote())
   const [feedbackOpen, setFeedbackOpen] = useState(false)
-  
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date())
     }, 1000)
-    
+
     return () => clearInterval(timer)
   }, [])
-  
+
   const refreshQuote = () => {
     setTodaysQuote(getRandomQuote())
   }
-  
+
   // Daily Inspiration section
   const DailyInspiration = () => (
     <section className="quote-section">
@@ -37,14 +38,14 @@ const Dashboard = () => {
       </button>
     </section>
   )
-  
+
   const quickStats = [
     { label: 'Daily Goal', value: `${completedTasks}/${dailyGoal}`, icon: '🎯' },
     { label: 'Current Time', value: currentTime.toLocaleTimeString(), icon: '⏰' },
     { label: 'Active Projects', value: '6', icon: '📁' },
     { label: 'Creativity Score', value: '85%', icon: '⭐' }
   ]
-  
+
   const featuredModules = [
     {
       title: 'Mini Games',
@@ -82,7 +83,7 @@ const Dashboard = () => {
       color: 'var(--warning-color)'
     }
   ]
-  
+
   return (
     <div className="dashboard" style={{ display: 'flex', flexDirection: 'row' }}>
       <RecentProjectsSidebar />
