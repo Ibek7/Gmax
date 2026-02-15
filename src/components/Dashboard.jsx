@@ -91,7 +91,7 @@ const Dashboard = () => {
         <header className="dashboard-header">
           <div style={{ display: 'flex', gap: 'var(--space-md)', marginBottom: 'var(--space-md)' }}>
             <ThemeSwitcher />
-            <button onClick={() => setFeedbackOpen(true)} className="theme-switcher">
+            <button onClick={() => setFeedbackOpen(true)} className="theme-switcher" aria-label="Open feedback form">
               💬 Feedback
             </button>
           </div>
