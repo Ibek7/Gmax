@@ -16,6 +16,12 @@ export const getCurrentTime = () => {
   })
 }
 
+export const formatDuration = (ms) => {
+  const minutes = Math.floor(ms / 60000);
+  const seconds = ((ms % 60000) / 1000).toFixed(0);
+  return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+}
+
 // Color utilities
 export const generateRandomColor = () => {
   const hue = Math.floor(Math.random() * 360)
@@ -30,7 +36,7 @@ export const getColorPalette = (baseColor) => {
     neon: ['#00ff88', '#ff0080', '#0080ff', '#ffff00'],
     pastel: ['#ffd1dc', '#e6e6fa', '#b0e0e6', '#f0fff0']
   }
-  
+
   return palettes[baseColor] || palettes.cool
 }
 
@@ -72,7 +78,7 @@ export const calculateProgress = (completed, total) => {
 export const getDailyGoalProgress = () => {
   const today = new Date().toDateString()
   const dailyData = loadFromStorage('dailyProgress', {})
-  
+
   if (!dailyData[today]) {
     dailyData[today] = {
       tasksCompleted: 0,
@@ -82,14 +88,14 @@ export const getDailyGoalProgress = () => {
       wordsWritten: 0
     }
   }
-  
+
   return dailyData[today]
 }
 
 export const updateDailyProgress = (updates) => {
   const today = new Date().toDateString()
   const dailyData = loadFromStorage('dailyProgress', {})
-  
+
   if (!dailyData[today]) {
     dailyData[today] = {
       tasksCompleted: 0,
@@ -99,17 +105,17 @@ export const updateDailyProgress = (updates) => {
       wordsWritten: 0
     }
   }
-  
+
   dailyData[today] = { ...dailyData[today], ...updates }
   saveToStorage('dailyProgress', dailyData)
-  
+
   return dailyData[today]
 }
 
 // Game statistics utilities
 export const saveGameScore = (gameId, score) => {
   const gameStats = loadFromStorage('gameStats', {})
-  
+
   if (!gameStats[gameId]) {
     gameStats[gameId] = {
       highScore: 0,
@@ -117,16 +123,16 @@ export const saveGameScore = (gameId, score) => {
       totalScore: 0
     }
   }
-  
+
   gameStats[gameId].totalPlays += 1
   gameStats[gameId].totalScore += score
   gameStats[gameId].highScore = Math.max(gameStats[gameId].highScore, score)
-  
+
   saveToStorage('gameStats', gameStats)
-  
+
   // Update daily progress
   updateDailyProgress({ gamesPlayed: getDailyGoalProgress().gamesPlayed + 1 })
-  
+
   return gameStats[gameId]
 }
 
