@@ -13,6 +13,10 @@ All notable changes to Gmax Creative Studio will be documented in this file.
 - Added new inspirational quotes.
 - Added Z-index variables to the design system.
 - Added `.editorconfig` for consistent coding style.
+- Added properties path alias `@/*` to `jsconfig.json` and `vite.config.js`.
+- Added `Footer` component.
+- **Refactor**: Standardized layout dimensions using CSS variables (`--container-max-width`, `--header-height`).
+
 
 ## [1.0.0] - 2024-10-09
 
