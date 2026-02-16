@@ -16,6 +16,17 @@ export const getCurrentTime = () => {
   })
 }
 
+export const truncateString = (str, num) => {
+  if (str.length <= num) {
+    return str
+  }
+  return str.slice(0, num) + '...'
+}
+
+export const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
 export const formatDuration = (ms) => {
   const minutes = Math.floor(ms / 60000);
   const seconds = ((ms % 60000) / 1000).toFixed(0);
