@@ -86,6 +86,15 @@ The application supports multiple themes:
 
 Switch themes using the theme selector in the navigation bar.
 
+## ♿ Accessibility
+
+The application is built with inclusivity in mind:
+- **Semantic HTML**: Proper use of header, main, footer, and nav tags.
+- **Keyboard Navigation**: All interactive elements are focusable and usable via keyboard.
+- **ARIA Labels**: Added context for screen readers on icon-only buttons.
+- **Color Contrast**: Themes are designed to maintain readable contrast ratios.
+- **Reduced Motion**: Respects system preferences for reduced motion where applicable.
+
 ## 📁 Project Structure
 
 ```
