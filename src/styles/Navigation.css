@@ -21,13 +21,13 @@
 }
 
 .nav-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 var(--space-lg);
-  height: 80px;
 }
 
 .nav-brand {
@@ -142,15 +142,15 @@
   .nav-container {
     padding: 0 var(--space-md);
   }
-  
+
   .nav-items {
     gap: var(--space-sm);
   }
-  
+
   .nav-label {
     display: none;
   }
-  
+
   .nav-item {
     padding: var(--space-sm);
   }
