@@ -60,6 +60,7 @@ import BrowserCompatibilityChecker from './components/BrowserCompatibilityChecke
 import PerformanceBudgetCalculator from './components/PerformanceBudgetCalculator'
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
+import Footer from './components/Footer'
 import './styles/App.css'
 
 /**
@@ -135,6 +136,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   )
