@@ -61,6 +61,7 @@ import PerformanceBudgetCalculator from './components/PerformanceBudgetCalculato
 import AmbientNoise from './components/AmbientNoise'
 import NotFound from './components/NotFound'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import './styles/App.css'
 
 /**
@@ -136,6 +137,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+        <ScrollToTop />
         <Footer />
       </div>
     </Router>
