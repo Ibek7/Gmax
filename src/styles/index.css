@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
 :root {
   /* Default Theme */
   --primary-color: #6366f1;
