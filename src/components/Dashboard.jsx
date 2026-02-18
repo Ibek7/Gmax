@@ -8,10 +8,13 @@ import ThemeSwitcher from './ThemeSwitcher'
 import FeedbackModal from './FeedbackModal'
 import SessionTimer from './SessionTimer'
 
+import useDebounce from '../hooks/useDebounce'
+
 const Dashboard = () => {
   const [currentTime, setCurrentTime] = useState(new Date())
   const [dailyGoal, setDailyGoal] = useState(5)
   const [completedTasks, setCompletedTasks] = useState(0)
+  const debouncedTasks = useDebounce(completedTasks, 500)
   const [todaysQuote, setTodaysQuote] = useState(getRandomQuote())
   const [feedbackOpen, setFeedbackOpen] = useState(false)
 
