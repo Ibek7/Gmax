@@ -59,6 +59,14 @@ All notable changes to Gmax Creative Studio will be documented in this file.
 - **Responsive Design**: Mobile-first approach with breakpoints
 - **Accessibility**: Keyboard navigation, screen reader support
 - **Animations**: Particle systems, confetti effects, smooth transitions
+- **Border Radius**: Consistent rounding with `--radius` variables
+- **Layout**: Dynamic spacing with layout variables
+- **Utilities**:
+  - `debounce`: Delay function execution
+  - `truncateString`: Shorten text with ellipsis
+  - `capitalizeFirstLetter`: Text formatting
+- **Hooks**:
+  - `useDebounce`: React hook for debouncing values
 - **Typography**: Consistent font sizing and spacing scale
 - **Color Theory**: Carefully crafted theme palettes
 
