@@ -63,17 +63,19 @@
 .nav-item {
   display: flex;
   align-items: center;
-  padding: var(--space-sm) var(--space-md);
-  text-decoration: none;
+  gap: var(--space-xs);
   color: var(--text-secondary);
-  border-radius: var(--space-sm);
-  transition: all var(--transition-fast);
-  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
 }
 
 .nav-item:hover {
+  background-color: var(--surface-color);
   color: var(--primary-color);
-  background-color: rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
 }
 
 .nav-item.active {
