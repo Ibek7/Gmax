@@ -30,13 +30,16 @@ const ScrollToTop = () => {
     }, [])
 
     return (
-        <>
-            {isVisible && (
-                <div onClick={scrollToTop} className="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
-                    ↑
-                </div>
-            )}
-        </>
+        isVisible ? (
+            <button
+                onClick={scrollToTop}
+                className="scroll-to-top"
+                aria-label="Scroll to top"
+                title="Scroll to top"
+            >
+                ↑
+            </button>
+        ) : null
     )
 }
 
